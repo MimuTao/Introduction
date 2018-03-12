@@ -1,0 +1,1231 @@
+
+%% bare_jrnl.tex
+%% V1.4b
+%% 2015/08/26
+%% by Michael Shell
+%% see http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.8b or later) with an IEEE
+%% journal paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/pkg/ieeetran
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE!
+%% User assumes all risk.
+%% In no event shall the IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%*************************************************************************
+
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. The IEEE's font choices and paper sizes can   ***
+% *** trigger bugs that do not appear when using other class files.       ***                          ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+
+\documentclass[journal]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{CJK}
+\usepackage{color}
+\usepackage{amsmath}
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[journal]{../sty/IEEEtran}
+
+
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/pkg/ifpdf
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+%\usepackage{cite}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of the IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off
+% such as if a citation ever needs to be enclosed in parenthesis.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 5.0 (2009-03-20) and later if using hyperref.sty.
+% The latest version can be obtained at:
+% http://www.ctan.org/pkg/cite
+% The documentation is contained in the cite.sty file itself.
+
+
+
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation
+% can be obtained at:
+% http://www.ctan.org/pkg/graphicx
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found at:
+% http://www.ctan.org/pkg/epslatex
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). The IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+%\usepackage{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics.
+%
+% Note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/amsmath
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as the IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/pkg/algorithms
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/pkg/algorithmicx
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+%\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/pkg/array
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\ifCLASSOPTIONcompsoc
+%  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+%\else
+%  \usepackage[caption=false,font=footnotesize]{subfig}
+%\fi
+% subfig.sty, written by Steven Douglas Cochran, is the modern replacement
+% for subfigure.sty, the latter of which is no longer maintained and is
+% incompatible with some LaTeX packages including fixltx2e. However,
+% subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
+% which will override IEEEtran.cls' handling of captions and this will result
+% in non-IEEE style figure/table captions. To prevent this problem, be sure
+% and invoke subfig.sty's "caption=false" package option (available since
+% subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
+% handling of captions.
+% Note that the Computer Society format requires a larger sans serif font
+% than the serif footnote size font used in traditional IEEE formatting
+% and thus the need to invoke different subfig.sty package options depending
+% on whether compsoc mode has been enabled.
+%
+% The latest version and documentation of subfig.sty can be obtained at:
+% http://www.ctan.org/pkg/subfig
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure.
+% Be aware that LaTeX2e kernels dated 2015 and later have fixltx2e.sty's
+% corrections already built into the system in which case a warning will
+% be issued if an attempt is made to load fixltx2e.sty as it is no longer
+% needed.
+% The latest version and documentation can be found at:
+% http://www.ctan.org/pkg/fixltx2e
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/stfloats
+% Do not use the stfloats baselinefloat ability as the IEEE does not allow
+% \baselineskip to stretch. Authors submitting work to the IEEE should note
+% that the IEEE rarely uses double column equations and that authors should try
+% to avoid such use. Do not be tempted to use the cuted.sty or midfloat.sty
+% packages (also by Sigitas Tolusis) as the IEEE does not format its papers in
+% such ways.
+% Do not attempt to use stfloats with fixltx2e as they are incompatible.
+% Instead, use Morten Hogholm'a dblfloatfix which combines the features
+% of both fixltx2e and stfloats:
+%
+% \usepackage{dblfloatfix}
+% The latest version can be found at:
+% http://www.ctan.org/pkg/dblfloatfix
+
+
+
+
+%\ifCLASSOPTIONcaptionsoff
+%  \usepackage[nomarkers]{endfloat}
+% \let\MYoriglatexcaption\caption
+% \renewcommand{\caption}[2][\relax]{\MYoriglatexcaption[#2]{#2}}
+%\fi
+% endfloat.sty was written by James Darrell McCauley, Jeff Goldberg and
+% Axel Sommerfeldt. This package may be useful when used in conjunction with
+% IEEEtran.cls'  captionsoff option. Some IEEE journals/societies require that
+% submissions have lists of figures/tables at the end of the paper and that
+% figures/tables without any captions are placed on a page by themselves at
+% the end of the document. If needed, the draftcls IEEEtran class option or
+% \CLASSINPUTbaselinestretch interface can be used to increase the line
+% spacing as well. Be sure and use the nomarkers option of endfloat to
+% prevent endfloat from "marking" where the figures would have been placed
+% in the text. The two hack lines of code above are a slight modification of
+% that suggested by in the endfloat docs (section 8.4.1) to ensure that
+% the full captions always appear in the list of figures/tables - even if
+% the user used the short optional argument of \caption[]{}.
+% IEEE papers do not typically make use of \caption[]'s optional argument,
+% so this should not be an issue. A similar trick can be used to disable
+% captions of packages such as subfig.sty that lack options to turn off
+% the subcaptions:
+% For subfig.sty:
+% \let\MYorigsubfloat\subfloat
+% \renewcommand{\subfloat}[2][\relax]{\MYorigsubfloat[]{#2}}
+% However, the above trick will not work if both optional arguments of
+% the \subfloat command are used. Furthermore, there needs to be a
+% description of each subfigure *somewhere* and endfloat does not add
+% subfigure captions to its list of figures. Thus, the best approach is to
+% avoid the use of subfigure captions (many IEEE journals avoid them anyway)
+% and instead reference/explain all the subfigures within the main caption.
+% The latest version of endfloat.sty and its documentation can obtained at:
+% http://www.ctan.org/pkg/endfloat
+%
+% The IEEEtran \ifCLASSOPTIONcaptionsoff conditional can also be used
+% later in the document, say, to conditionally put the References on a
+% page by themselves.
+
+
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+%\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version and documentation can be obtained at:
+% http://www.ctan.org/pkg/url
+% Basically, \url{my_url_here}.
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+%
+% paper title
+% Titles are generally capitalized except for words such as a, an, and, as,
+% at, but, by, for, in, nor, of, on, or, the, to and up, which are usually
+% not capitalized unless they are the first or last word of the title.
+% Linebreaks \\ can be used within to get better formatting as desired.
+% Do not put math or special symbols in the title.
+\title{Adaptive Actuator Failure Compensation Control of Second-order Nonlinear Systems with Unknown Time Delay}
+%
+%
+% author names and IEEE memberships
+% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+% a structure at a ~ so this keeps an author's name from being broken across
+% two lines.
+% use \thanks{} to gain access to the first footnote area
+% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+% was not built to handle multiple paragraphs
+%
+
+%\author{Michael~Shell,~\IEEEmembership{Member,~IEEE,}
+%        John~Doe,~\IEEEmembership{Fellow,~OSA,}
+%        and~Jane~Doe,~\IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
+%\thanks{M. Shell was with the Department
+%of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
+%GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
+%\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
+%\thanks{Manuscript received April 19, 2005; revised August 26, 2015.}}
+
+\author{Jianping Cai$^{\dag}$,~\IEEEmembership{}
+        Haoyi Que$^{\ddag}$,~\IEEEmembership{}
+        Dehui Lin$^{\S}$,~\IEEEmembership{}
+        Qingping Zhou$^{\flat}$,~\IEEEmembership{}
+        Lujuan Shen$^{\dag}$~\IEEEmembership{}
+        %$^{\ddag}$~\IEEEmembership{}% <-this % stops a space
+\thanks{This work was supported by the National Natural Science Foundation of P.R. China (NSFC:61573322).}
+\thanks{$^{\dag}$Jianping Cai is with Zhejiang University of Water Resources and Electric Power, Hangzhou, 310018, P.R.China. e-mail: caijianping2001@163.com; Lujuan Shen is with Zhejiang University of Water Resources and Electric Power, Hangzhou, 310018, P.R.China. e-mail: ljshen@zjweu.edu.cn.}
+\thanks{$^{\ddag}$Haoyi Que is with the State Key Laboratory of Industrial Control Technology Institute of Cyber-Systems and Control, Zhejiang University, Hangzhou, 310027, P.R.China. e-mail: fatqcrab@163.com.}
+\thanks{$^{\S}$Dehui Lin is with China Jiliang University, Hangzhou, 310018, P.R.China. e-mail: woihll@qq.com.}
+\thanks{$^{\ddag}$Qingping Zhou is with Tangshan Normal University, Tangshan, 063000, P.R.China. e-mail: zhouqingping1999@163.com.}
+}
+
+% note the % following the last \IEEEmembership and also \thanks -
+% these prevent an unwanted space from occurring between the last author name
+% and the end of the author line. i.e., if you had this:
+%
+% \author{....lastname \thanks{...} \thanks{...} }
+%                     ^------------^------------^----Do not want these spaces!
+%
+% a space would be appended to the last name and could cause every name on that
+% line to be shifted left slightly. This is one of those "LaTeX things". For
+% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
+% "AB" then you have to do: "\textbf{A}\textbf{B}"
+% \thanks is no different in this regard, so shield the last } of each \thanks
+% that ends a line with a % and do not let a space in before the next \thanks.
+% Spaces after \IEEEmembership other than the last one are OK (and needed) as
+% you are supposed to have spaces between the names. For what it is worth,
+% this is a minor point as most people would not even notice if the said evil
+% space somehow managed to creep in.
+
+
+
+% The paper headers
+\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+% The only time the second header will appear is for the odd numbered pages
+% after the title page when using the twoside option.
+%
+% *** Note that you probably will NOT want to include the author's ***
+% *** name in the headers of peer review papers.                   ***
+% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
+% you desire.
+
+
+
+
+% If you want to put a publisher's ID mark on the page you can do it like
+% this:
+%\IEEEpubid{0000--0000/00\$00.00~\copyright~2015 IEEE}
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark.
+
+
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+
+
+% make the title area
+\maketitle
+
+% As a general rule, do not put math, special symbols or citations
+% in the abstract or keywords.
+\begin{abstract}
+%Unknown actuator failure and unknown time delay could be  established  in practice systems inevitablely. So it is meaningful to explore the control problem for time delay systems with unknown actuator failures.
+
+ A robust adaptive control law is proposed based on backstepping technique for unknown actuator failure and unknown time delay in this paper. Seperate from  existing results, the bounding function of time delay term $h_i(x_1, x_2)$ in system (\ref{eq1}) depends only on all system states, which triangular structure is destroyed here. By maintaining a linear projection between the state vector $(x_1,x_2)$ and its transformed vector $(z_1,z_2)$ in controller design, triangular structure requirement of backstepping technology is no longer needed. Simulation results show that the designed controller can ensure the stability of the closed-loop system.
+\end{abstract}
+
+% Note that keywords are not normally used for peerreview papers.
+\begin{IEEEkeywords}
+Adaptive control, Time delay, Actuator failure, Backsteppting.
+\end{IEEEkeywords}
+
+
+
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+
+\section{Introduction}
+% The very first letter is a 2 line initial drop letter followed
+% by the rest of the first word in caps.
+%
+% form to use if the first word consists of a single letter:
+% \IEEEPARstart{A}{demo} file is ....
+%
+% form to use if you need the single drop letter followed by
+% normal text (unknown if ever used by the IEEE):
+% \IEEEPARstart{A}{}demo file is ....
+%
+% Some journals put the first two words in caps:
+% \IEEEPARstart{T}{his demo} file is ....
+%
+% Here we have the typical use of a "T" for an initial drop letter
+% and "HIS" in caps to complete the first word.
+
+\IEEEPARstart{T}{ime} delay exists in great number of practical systems, especially in mechanics, physics, biology and engineering systems and so on. With the problem of instability, even catastrophic accident, time delay are inevitably to be considered in the design and anal of control systems. In recent twenty years, many schemes have been proposed to solve this problem. For example, see \cite{n1}-\cite{n7}, including coupled neural networks \cite{n1}, uncertain neural systems \cite{n2}, Markovian jump neural networks \cite{n3}, and csome ways trying to compensate the effect of time delays in discrete-time neural networks \cite{n4}-\cite{n5}.  For uncertain nonlinear systems, especially parametric strict feedback systems, the existence of unknown time delay make the controller design and stability analysis become difficult. The triangular time delay term is considered in \cite{n6}-\cite{n7} and the control laws have been proposed by using backstepping technology.
+
+%\IEEEPARstart{T}{ime} delay exists in wide range of practical systems, especially in mechanics, physics, biology and engineering systems and so on. Because the effect of time delays may lead to instability or even catastrophic accidents, so it cannot be ignored in the design and analysis of control systems. In the context of time delay systems, several schemes have been proposed in recent twenty years, see for example \cite{n1}-\cite{n7}. For neural network systems including coupled neural networks \cite{n1}, uncertain neural systems \cite{n2}, Markovian jump neural networks \cite{n3}, discrete-time neural networks \cite{n4}-\cite{n5}, several results have been achieved to compensate the effect of time delays. For uncertain nonlinear systems, especially parametric strict feedback systems, the existence of unknown time delay make the controller design and stability analysis become difficult. The triangular time delay term is considered in \cite{n6}-\cite{n7} and the control laws have been proposed by using backstepping technology.
+
+Meanwhile, some common cases such as actuator failures \cite{n8}-\cite{n10}, fading \cite{n11}, uncertain kinematics and dynamics to robotic systems \cite{n12} and electronic circuits systems \cite{n13}, dead-zone \cite{n14}-\cite{n17}, input and sensor nonlinearities \cite{n18}-\cite{n20}, backlash \cite{n21}, state constraint \cite{n22} of practical systems have great effect on the performance of the controlled system. Actuator failures generally occurec in all practical systems with uncertainty at the same time, both with value and pattern. Therefore, the uncertainties caused by unknown failures are difficult to compensate. Especially, the existence of time delays renders such problem much more complex. In this paper, we address such a problem by considering controlling a second-order nonlinear systems with time delays. Different from \cite{n6}-\cite{n7}, time delays considered in this paper do not need triangular structure   condition. Hence standard backstepping technology \cite{n23} is not used in the controller design. In order to deal with the situation, the effects of such time delays are not considered in every step, but accumulated to the last step, and compensated by choosing appropriate design parameters in control laws. Simultaneously, the existence of unknown actuator failures make the controller design and stability analysis become more difficult. Consequently, the compositive effects caused by time delays and unknown failures must be compensated by the same controller. To confront the problems,  Online estimator for unknown actuator failures for time delay systerms has been designed. Based on maintaining a linear relation between the state vector $(x_1,x_2)$ and its transformed vector $(z_1,z_2)$, the uncertainties of actuator failures and unknown time delays have been transfered easy to handle, and the stability of systems is protected. Simulations show the effectiveness.
+   
+The main contributions of this paper, compared with the existing results, are as follows: (1) The control problem is explored for time delay systems with unknown actuator failures and unknown parameters. (2) In addition, the online estimator of unknown actuator failures for time delay systerms has been designed to compensate the compositive effects caused by unknown time delays and unknown actuator failures. (3) Moreover, unlike existing results of time delay systems by using backstepping technology triangular structure requirement is no longer needed in this paper. Namely, the bounding function of time delay term $h_i(x_1, x_2)$ in system (\ref{eq1}) is allowed to depend on all system states and then triangular structure is destroyed. 
+
+The rest of the paper is organized as follows. In section 2, we formulate the second order time delay system by differential equations and give the model of unknown actuator failures. Adaptive control scheme and stability analyses of the closed-loop system are given in section 3. In section 4, some simulation results are shown in detail. Finally, the paper is concluded in section 5.
+
+\section{Models and problem statement}
+To illustrate our design ideas, following class of second-order nonlinear systems with uncertain parameters and unknown time delay is considered. And The system model is given by
+\begin{eqnarray}\label{eq1}
+ &&\dot{x}_1=x_2+h_1(x_1(t-\tau),x_2(t-\tau))\nonumber\\
+ &&\dot{x}_2=\theta^Tf(x)+\sum\limits_{i=1}^mb_iu_i+h_2(x_1(t-\tau),x_2(t-\tau))\nonumber\\
+ &&y=x_1
+\end{eqnarray}
+where $x=(x_1,x_2)^T$ is system state and $u_i\in R$ $(i=1, 2\cdots, m)$ is input, $y=x_1$ is output. $f(x)\in R^p$ is known function and $b_i\in R$ $(i=1, 2\cdots, m)$, $\theta\in R^p$ are unknown parameters. $h_1(\cdot)$, $h_2(\cdot) \in R$ are known smooth functions and $\tau\in R$ is unknown time delay of state $x$.
+
+We now consider the $i$th actuator may fail during its operation. As in \cite{n8} and \cite{n9}, the failure of the $i$th actuator at time instant $t_{if}$ can be modelled as follows
+\begin{eqnarray}\label{eq2}
+ &&u_i=\rho_iu_{ci}+u_{ki},~~(\forall t\geq t_{if})\nonumber\\
+ &&\rho_iu_{ki}=0
+\end{eqnarray}
+where $u_{ci}$ is the input of the $i$th actuator and $\rho_i\in [0, 1]$, $u_{ki}$ and $t_{if}$ are unknown constant. The following three cases are discussed in this paper:
+\begin{itemize}
+  \item $\rho_i=1$,\\
+  It indicates $u_i=u_{ci}$. The $i$th actuator works normally.
+  \item $0<\rho_i<1$,\\
+  It indicates $u_i=\rho_iu_{ci}$. The $i$th actuator is called partial loss of effectiveness.
+  \item $\rho_i=0$,\\
+  It indicates $u_i=u_{ki}$. The $i$th actuator is called total loss of effectiveness.
+\end{itemize}
+The control objective is to design adaptive control scheme for the system (\ref{eq1}) with unknown actuator failures given in (\ref{eq2}) to guarantee all signals bounded. To design adaptive control scheme, the following Assumptions for system functions, unknown time delay and actuator failures are ordered.
+
+\textbf{Assumption 1:} Nonlinear functions $h_i(x_1, x_2)~~i=1, 2$ satisfy following condition
+\begin{eqnarray}\label{eq3}
+|h_i(x_1, x_2)|\leq \delta_i||(x_1, x_2)||_2~~(i=1, 2)
+\end{eqnarray}
+where $\delta_i>0$ is a known constant.
+
+\textbf{Remark 1:} In the context of adaptive control of strict-feedback systems with state delays by using backstepping techniques, the time delay term in the $i$th state differential equation is required to only depend on states $x_1, \cdots, x_i$, for examples \cite{n6} and \cite{n7}. Such a requirement can keep the control system has triangular structure which is needed by backstepping. However according to Assumption 1, the bounding function of time delay term $h_i(x_1, x_2)$ in system (\ref{eq1}) can depend all system states. Thus it means that such triangular structure requirement is no longer needed in this paper.
+
+\textbf{Remark 2:} $\delta_i$ can be interpreted as the gain or strength of the time delay term. In this paper, we will discuss how to obtain the adaptive controller of system (\ref{eq1}). The existence of time delay and unknown actuator failures given in (\ref{eq2}) render the controller design much more complex and difficult, therefore the result given in this paper will be aimed at enough small $\delta_i$. It makes our results limited.
+
+\textbf{Assumption 2:} The number of total fail actuators is up to $m-1$ and the control objectives can be achieved by other normal actuators. Also any actuator can change only from normal to partial failure or total failure once.
+
+\textbf{Remark 3:} Assumption 2 is a basic assumption required in adaptive failure compensation. It can be concluded that total number of actuator failures is finite and there exists a finite time instant $T_f$ after which no new failure will occur.
+
+\textbf{Assumption 3:} Unknown parameter $b_i\neq 0$ and the sign of $b_i$ is known.
+
+With actuator failure model given in (\ref{eq2}), system (\ref{eq1}) can be rewritten as
+\begin{eqnarray}\label{eq4}
+\dot{x}_1&=&x_2+h_1(x_1(t-\tau),x_2(t-\tau))\nonumber\\
+\dot{x}_2&=&\theta^T f(x)+\sum\limits_{i=1}^mb_i(\rho_iu_{ci}+u_{ki})\nonumber\\
+          &&+h_2(x_1(t-\tau),x_2(t-\tau))\\
+y&=&x_1\nonumber
+\end{eqnarray}
+
+\section{Design and analysis of adaptive controllers}
+To obtain available control law and update laws based on the backstepping approach, the following projection are introduced.
+\begin{equation}\label{eq5}
+\begin{array}{l}
+  z_1=y=x_1 \\
+  z_2=x_2-\alpha_{1}
+\end{array}
+\end{equation}
+where $\alpha_{1}$ is the virtual control in step 1. Below we will give the design details following the recursive backstepping procedure.
+
+Step 1: From (\ref{eq1}) and (\ref{eq5}) the derivative of $z_1$ can be rewritten as
+\begin{eqnarray}\label{eq6}
+\dot z_1&=&\dot x_1\nonumber\\
+        &=&x_2+h_1(x_1(t-\tau),x_2(t-\tau))\nonumber\\
+        &=&z_2+\alpha_{1}+h_1(x_1(t-\tau),x_2(t-\tau))
+\end{eqnarray}
+We define a positive definite Lyapunov function as follows
+\begin{equation}\label{eq7}
+\bar V_1=\frac{1}{2}z_1^2+\frac{e_1}{2}\int_{t-\tau}^tU_1(x_1(s), x_2(s))ds
+\end{equation}
+where $e_1>0$ is a design parameter. Smooth function $U_1(x_1(s), x_2(s))$ is chosen as
+\begin{equation}\label{eq8}
+U_1(x_1(s), x_2(s))=h_1^2(x_1(s), x_2(s))
+\end{equation}
+Then we can get the derivative of $\bar V_1$ is
+\begin{eqnarray}\label{eq9}
+\dot {\bar V}_1&=&z_1\dot z_1+\frac{e_1}{2}U_1(x_1(s), x_2(s))\Big|_{t-\tau}^t\nonumber\\
+        &=&z_1(z_2+\alpha_{1}+h_1(x_1(t-\tau),x_2(t-\tau)))\\
+        &&+\frac{e_1}{2}(h_1^2(x_1(t), x_2(t))-h_1^2(x_1(t-\tau), x_2(t-\tau)))\nonumber
+\end{eqnarray}
+Note that
+\begin{equation}\label{eq10}
+z_1h_1(x_1(t-\tau),x_2(t-\tau))\leq\frac{z_1^2}{2 e_1}+\frac{e_1}{2}h_1^2(x_1(t-\tau), x_2(t-\tau))
+\end{equation}
+So we have
+\begin{eqnarray}\label{eq11}
+\dot {\bar V}_1\leq z_1(z_2+\alpha_{1})+\frac{z_1^2}{2 e_1}+\frac{e_1}{2}h_1^2(x_1(t), x_2(t))
+\end{eqnarray}
+Virtual control $a_1$ can be chosen as
+\begin{eqnarray}\label{eq12}
+\alpha_1=-k_1z_1-\frac{1}{2 e_1}z_1
+\end{eqnarray}
+where $k_1$ is a positive design parameter.
+Then from (\ref{eq11}) and (\ref{eq12}) we have
+\begin{eqnarray}\label{eq13}
+\dot {\bar V}_1&\leq& z_1(z_2-k_1z_1-\frac{1}{2 e_1}z_1)+\frac{z_1^2}{2 e_1}+\frac{e_1}{2}h_1^2(x_1(t), x_2(t))\nonumber\\
+               &=&z_1z_2-k_1z_1^2+\frac{e_1}{2}h_1^2(x_1(t), x_2(t))
+\end{eqnarray}
+
+%%  Step 2
+Step 2: From (\ref{eq1}) and (\ref{eq5}), we have
+\begin{eqnarray}\label{eq14}
+\dot z_2&=&\dot x_2-\dot\alpha_{1}\\
+        &=&\theta^Tf(x)+\sum\limits_{i=1}^mb_iu_i+h_2(x_1(t-\tau),x_2(t-\tau))-\dot\alpha_{1}\nonumber
+\end{eqnarray}
+Note that
+\begin{eqnarray}\label{eq15}
+\dot\alpha_{1}&=&\frac{d\alpha_{1}}{dx_1}\dot x_1\\
+&=&-(k_1+\frac{1}{2 e_1})(x_2+h_1(x_1(t-\tau),x_2(t-\tau)))\nonumber
+\end{eqnarray}
+Then
+\begin{eqnarray}\label{eq16}
+\dot z_2&=&\theta^Tf(x)+\sum\limits_{i=1}^mb_iu_i+h_2(x_1(t-\tau),x_2(t-\tau))\nonumber\\
+&&+(k_1+\frac{1}{2 e_1})(x_2+h_1(x_1(t-\tau),x_2(t-\tau)))
+\end{eqnarray}
+From (\ref{eq1}) and (\ref{eq5})
+\begin{eqnarray}\label{eq17}
+z_2\dot z_2&=&z_2(\theta^Tf(x)+\sum\limits_{i=1}^mb_iu_i)\nonumber\\
+&&+z_2h_2(x_1(t-\tau),x_2(t-\tau))\\
+&&+(k_1+\frac{1}{2 e_1})z_2(x_2+h_1(x_1(t-\tau),x_2(t-\tau)))\nonumber
+\end{eqnarray}
+Where
+\begin{eqnarray}\label{eq18}
+&&z_2h_2(x_1(t-\tau),x_2(t-\tau))\nonumber\\
+&&\leq \frac{z_2^2}{2 e_{22}}+ \frac{e_{22}}{2}h_2^2(x_1(t-\tau),x_2(t-\tau))\nonumber\\
+&&z_2h_1(x_1(t-\tau),x_2(t-\tau))\nonumber\\
+&&\leq \frac{z_2^2}{2 e_{21}}+ \frac{e_{21}}{2}h_1^2(x_1(t-\tau),x_2(t-\tau))
+\end{eqnarray}
+where $e_{21}$ and $e_{22}$ are positive design parameters. Then we have
+\begin{eqnarray}\label{eq19}
+z_2\dot z_2&\leq&z_2(\theta^Tf(x)+\sum\limits_{i=1}^mb_iu_i)+\frac{z_2^2}{2 e_{22}}+\frac{z_2^2}{2 e_{21}}\nonumber\\
+&&+(k_1+\frac{1}{2 e_1})z_2x_2+\frac{e_{22}}{2}h_2^2(x_1(t-\tau),x_2(t-\tau))\nonumber\\
+&&+\frac{e_{21}}{2}(k_1+\frac{1}{2 e_1})h_1^2(x_1(t-\tau),x_2(t-\tau))
+\end{eqnarray}
+Different from the standard backstepping approach, a virtual control $\alpha$ in this step is designed as follows
+\begin{eqnarray}\label{eq20}
+\alpha&=&-z_1-k_2z_2-\hat\theta^Tf(x)-(k_1+\frac{1}{2 e_1})(\frac{1}{2 e_{21}}z_2+x_2)\nonumber\\
+&&-\frac{1}{2 e_{22}}z_2
+\end{eqnarray}
+where $k_2$ is a positive design parameter and $\hat\theta$ is the estimation of $\theta$. Similar to \cite{n8} and \cite{n9}, the control law and update laws are designed as follows
+
+\textbf{Control Law:}
+\begin{equation}\label{eq21}
+u_{ci}=sign(b_i)\hat{\varrho}^T\gamma
+\end{equation}
+where $\hat{\varrho}$ is the estimation of $\varrho$. $\varrho$ is an unknown parameter and $\gamma$ is a known function. Both are $m+1$ dimensional vectors and can be denoted as
+\begin{equation}\label{eq22}
+\varrho=(\varrho_1,\varrho_{21},\ldots,\varrho_{2m})^T, \gamma=(\gamma_1,\gamma_{21},\ldots,\gamma_{2m})^T
+\end{equation}
+
+\textbf{Update Laws:}
+\begin{eqnarray}\label{eq23}
+&&\dot{\hat\theta}=\Gamma_\theta f(x)z_2\nonumber\\
+&&\dot{\hat\varrho}=-\Gamma_\varrho\gamma z_2
+\end{eqnarray}
+%\begin{eqnarray}\label{eq23}
+%&&\dot{\hat\theta}=\Gamma_\theta(f(x)z_2+l_\theta(\hat\theta-\theta_0))\nonumber\\
+%&&\dot{\hat\varrho}=-\Gamma_\varrho(\gamma z_2+l_\varrho(\hat\varrho-\varrho_0))
+%\end{eqnarray}
+where $\Gamma_\theta, \Gamma_\varrho$ are positive definite matrices.
+%where $\Gamma_\theta, \Gamma_\varrho$ are positive definite matrices and $l_\theta, l_\varrho, \theta_0, \varrho_0$ are positive design parameters.
+
+\section{Stability analysis}
+We now analyze the stability of closed loop system with control law and update laws in (\ref{eq21}) and (\ref{eq23}). We use $T_j$ to represent the time instant at which the actuator failure occurred. Therefore, all actuators working condition do not change between two adjacent time point $T_i$ and $T_{i+1}$. Namely, no new normal actuator fails in time interval $(T_i, T_{i+1})$. Let the set $U_{iT}$ denotes the actuators of total failure in interval $(T_i, T_{i+1})$. Clearly, with Assumption 2 there exists a time instant $T_f$  such that no new failure will occur after it. Let $T_0=0$, $T_{f+1}=\infty$, so we can get $U_{0T}=\{1, 2,\cdots, m\}$ and $U_{fT}$ is not empty. Our mail result is given as follows
+
+\textbf{Theorem 1:} Consider the time delay system (\ref{eq1}) with unknown actuator failures described by (\ref{eq2}) with control law (\ref{eq21}) and the update laws (\ref{eq23}). Under Assumption 1 to Assumption 3, there exist a positive constant $\delta^*$ such
+that for all $\delta_i<\delta^*$ All the signals in the closed-loop system are globally
+bounded. Also output $y$ satisfies
+\begin{equation}\label{eq24}
+lim_{t\rightarrow{\infty}}|y|=0
+\end{equation}
+\textbf{Proof.} Firstly, we consider the following Lyapunov function in time interval  $[T_i, T_{i+1})$
+\begin{eqnarray}\label{eq25}
+V_i&=&\bar V_1+\frac{1}{2}z_2^2+\frac{1}{2}\tilde\theta^T\Gamma_\theta^{-1}\tilde\theta+\sum\limits_{i\in \bar U_{it}}\frac{\rho_i|b_i|}{2}\tilde{\varrho}^T\Gamma_{\varrho}^{-1}\tilde{\varrho}\nonumber\\
+&&+\frac{e_{21}}{2}(k_1+\frac{1}{2e_1})\int_{t-\tau}^tU_{21}(x_1(s), x_2(s))ds\nonumber\\
+&&+\frac{e_{22}}{2}\int_{t-\tau}^tU_{22}(x_1(s), x_2(s))ds
+\end{eqnarray}
+where $\tilde{\varrho}=\hat\varrho-\varrho$ and $\tilde\theta=\hat\theta-\theta$ are estimation errors of $\varrho$ and $\theta$. Let $U_{21}(x_1(s), x_2(s))=h_1^2(x_1(s), x_2(s))$ and $U_{22}(x_1(s), x_2(s))=h_2^2(x_1(s), x_2(s))$. Then the derivative of $V_i$ is
+\begin{eqnarray}\label{eq26}
+\dot V_i&=&\dot{\bar V}_1+z_2\dot z_2+\tilde\theta^T\Gamma_\theta^{-1}\dot{\hat\theta}+\sum\limits_{i\in \bar U_{it}}\rho_i|b_i|\tilde{\varrho}^T\Gamma_{\varrho}^{-1}\dot{\hat{\varrho}}\nonumber\\
+&&+\frac{e_{21}}{2}(k_1+\frac{1}{2e_1})(h_1^2(t)-h_1^2(t-\tau))\nonumber\\
+&&+\frac{e_{22}}{2}(h_2^2(t)-h_2^2(t-\tau))
+\end{eqnarray}
+where we use $h_i^2(t)$ and $h_i^2(t-\tau)$ represent $h_i^2(x_1(t),x_2(t))$ and $h_i^2(x_1(t-\tau),x_2(t-\tau))$, respectively. With (\ref{eq13}) and (\ref{eq19}) we have
+\begin{eqnarray}\label{eq27}
+\dot V_i&\leq&z_1z_2-k_1z_1^2+\frac{e_1}{2}h_1^2(t)+z_2(\sum\limits_{i=1}^mb_i(\rho_iu_{ci}+u_{ki})\nonumber\\
+&&+\theta^Tf(x)+(k_1+\frac{1}{2e_1})x_2)+\frac{z_2^2}{2 e_{22}}+(k_1+\frac{1}{2e_1})\nonumber\\
+&&\frac{z_2^2}{2 e_{21}}+\tilde\theta^T\Gamma_\theta^{-1}\dot{\hat\theta}+\sum\limits_{i\in \bar U_{it}}\rho_i|b_i|\tilde{\varrho}^T\Gamma_{\varrho}^{-1}\dot{\hat{\varrho}}\nonumber\\
+&&+\frac{e_{21}}{2}(k_1+\frac{1}{2e_1})h_1^2(t)+\frac{e_{22}}{2}h_2^2(t)
+\end{eqnarray}
+Take $\varrho$ as
+\begin{equation}\label{eq28}
+\begin{array}{l}
+\varrho_1=\frac{1}{\sum\limits_{i\in{\bar{U}_{iT}}}\rho_i|b_i|}\\
+\varrho_{2i}=0,(i\in{\bar{U}_{iT}})\\
+\varrho_{2i}=-\frac{b_iu_{ki}}{\sum\limits_{i\in{\bar{U}_{iT}}}\rho_i|b_i|}(i\in{{U}_{iT}})\\
+\end{array}
+\end{equation}
+and $\gamma$
+\begin{equation}\label{eq29}
+  \gamma_1=\alpha;~~~\gamma_{2i}=1
+\end{equation}
+Clearly, we have
+\begin{eqnarray}\label{eq30}
+&&\sum\limits_{i=1}^m\rho_ib_isign(b_i)\varrho^T\gamma\nonumber\\
+&&=\sum\limits_{i=1}^m\rho_i|b_i|\Big(\frac{1}{\sum\limits_{i\in{\bar{U}_{iT}}}\rho_i|b_i|}\alpha+{\sum\limits_{i\in{U_{iT}}}}(-\frac{b_iu_{ki}}{\sum\limits_{i\in{\bar{U}_{iT}}}\rho_i|b_i|})\Big)\nonumber\\
+&&=\sum\limits_{i\in\bar{U}_{iT}}\rho_i|b_i|\Big(\frac{1}{\sum\limits_{i\in{\bar{U}_{iT}}}\rho_i|b_i|}\alpha+{\sum\limits_{i\in{U_{iT}}}}(-\frac{b_iu_{ki}}{\sum\limits_{i\in{\bar{U}_{iT}}}\rho_i|b_i|})\Big)\nonumber\\
+&&=\alpha-\sum\limits_{i\in U_T}b_iu_{ki}
+\end{eqnarray}
+With control law in (\ref{eq21})
+\begin{eqnarray}\label{eq31}
+&&\sum\limits_{i=1}^mb_i(\rho_iu_{ci}+u_{ki})=\sum\limits_{i\in\bar U_{iT}}b_i\rho_iu_{ci}+\sum\limits_{i\in U_{iT}}b_iu_{ki}\nonumber\\
+&&=\sum\limits_{i\in\bar U_{iT}}b_i\rho_isign(b_i)\hat\varrho^T\gamma+\sum\limits_{i\in U_{iT}}b_iu_{ki}\nonumber\\
+&&=\sum\limits_{i\in\bar U_{iT}}b_i\rho_isign(b_i)(\tilde\varrho+\varrho)^T\gamma+\sum\limits_{i\in U_{iT}}b_iu_{ki}\nonumber\\
+&&=\sum\limits_{i\in\bar U_{iT}}b_i\rho_isign(b_i)(\tilde\varrho+\varrho)^T\gamma+\sum\limits_{i\in U_{iT}}b_iu_{ki}
+\end{eqnarray}
+From (\ref{eq30}), we have
+\begin{eqnarray}\label{eq32}
+\sum\limits_{i=1}^mb_i(\rho_iu_{ci}+u_{ki})=\sum\limits_{i\in\bar U_{iT}}|b_i|\rho_i\tilde\varrho^T\gamma+\alpha
+\end{eqnarray}
+Then the derivative of $V_i$ can be rewritten as
+\begin{eqnarray}\label{eq33}
+\dot V_i&\leq&z_1z_2-k_1z_1^2+\frac{e_1}{2}h_1^2(t)+z_2(\sum\limits_{i\in\bar U_{iT}}|b_i|\rho_i\tilde\varrho^T\gamma+\alpha\nonumber\\
+&&+\theta^Tf(x)+(k_1+\frac{1}{2e_1})x_2)+\frac{z_2^2}{2 e_{22}}+(k_1+\frac{1}{2e_1})\nonumber\\
+&&\frac{z_2^2}{2 e_{21}}+\tilde\theta^T\Gamma_\theta^{-1}\dot{\hat\theta}+\sum\limits_{i\in \bar U_{it}}\rho_i|b_i|\tilde{\varrho}^T\Gamma_{\varrho}^{-1}\dot{\hat{\varrho}}\nonumber\\
+&&+\frac{e_{21}}{2}(k_1+\frac{1}{2e_1})h_1^2(t)+\frac{e_{22}}{2}h_2^2(t)\\
+&=&-k_1z_1^2-k_2z_2^2+\sum\limits_{i\in \bar U_{it}}\rho_i|b_i|\tilde{\varrho}^T\Gamma_{\varrho}^{-1}(\dot{\hat{\varrho}}+\Gamma_\varrho\gamma z_2)\nonumber\\
+&&+\tilde\theta^T\Gamma_\theta^{-1}(\dot{\hat\theta}-\Gamma_\theta f(x)z_2)+\frac{e_{22}}{2}h_2^2(t)\nonumber\\
+&&+(\frac{e_1}{2}+\frac{e_{21}}{2}(k_1+\frac{1}{2e_1}))h_1^2(t)\nonumber
+\end{eqnarray}
+With update laws given in (\ref{eq23}), we can get
+\begin{eqnarray}\label{eq34}
+\dot V_i&\leq&-k_1z_1^2-k_2z_2^2+\frac{e_{22}}{2}h_2^2(t)\nonumber\\
+&&+(\frac{e_1}{2}+\frac{e_{21}}{2}(k_1+\frac{1}{2e_1}))h_1^2(t)
+\end{eqnarray}
+%\begin{eqnarray}\label{eq34}
+%\dot V_i&\leq&-k_1z_1^2-k_2z_2^2+\sum\limits_{i\in \bar U_{it}}\rho_i|b_i|\tilde{\varrho}^Tl_\varrho(\hat\varrho-\varrho_0)\nonumber\\
+%&&+\tilde\theta^Tl_\theta(\hat\theta-\theta_0)+(\frac{e_1}{2}+\frac{e_{21}}{2}(k_1+\frac{1}{2e_1}))h_1^2(t)\nonumber\\
+%&&+\frac{e_{22}}{2}h_2^2(t)
+%\end{eqnarray}
+%Note that
+%\begin{equation}\label{q35}
+%l_\theta\tilde\theta^T(\hat\theta-\theta_0)\leq-\frac{1}{2}l_\theta||\tilde{\theta}||^2+\frac{1}{2}l_\theta||\theta-\theta_0||^2
+%\end{equation}
+%\begin{equation}\label{q36}
+%l_\varrho\tilde\varrho^T(\hat\varrho-\varrho_0)\leq-\frac{1}{2}l_\varrho||\tilde{\varrho}||^2+\frac{1}{2}l_\varrho||\varrho-\varrho_0||^2
+%\end{equation}
+%We can obtain
+%\begin{eqnarray}\label{eq37}
+%\dot V_i&\leq&-\sum\limits_{i=1,2}k_iz_i^2-(\sum\limits_{i\in \bar U_{it}}\rho_i|b_i|)\frac{l_\varrho}{2}||\tilde{\varrho}||^2\nonumber\\
+%&&-\frac{1}{2}l_\theta||\tilde{\theta}||^2+(\frac{e_1}{2}+\frac{e_{21}}{2}(k_1+\frac{1}{2e_1}))h_1^2(t)\nonumber\\
+%&&+\frac{e_{22}}{2}h_2^2(t)+\Pi_i
+%\end{eqnarray}
+%where
+%\begin{equation}\label{eq38}
+%\Pi_i=(\sum\limits_{i\in \bar U_{it}}\rho_i|b_i|)\frac{l_\varrho}{2}||\varrho-\varrho_0||^2+\frac{1}{2}l_\theta||\theta-\theta_0||^2
+%\end{equation}
+From Assumption 1, we have
+%\begin{eqnarray}\label{eq39}
+%\dot V_i&\leq&-\sum\limits_{i=1,2}k_iz_i^2-(\sum\limits_{i\in \bar U_{it}}\rho_i|b_i|)\frac{l_\varrho}{2}||\tilde{\varrho}||^2\nonumber\\
+%&&-\frac{1}{2}l_\theta||\tilde{\theta}||^2+(\frac{e_1}{2}+\frac{e_{21}}{2}(k_1+\frac{1}{2e_1}))\delta_1^2||x||_2^2\nonumber\\
+%&&+\frac{e_{22}}{2}\delta_2^2||x||_2^2+\Pi_i
+%\end{eqnarray}
+\begin{eqnarray}\label{eq39}
+\dot V_i&\leq&-\sum\limits_{i=1,2}k_iz_i^2+\frac{e_{22}}{2}\delta_2^2||x||_2^2\nonumber\\
+&&+(\frac{e_1}{2}+\frac{e_{21}}{2}(k_1+\frac{1}{2e_1}))\delta_1^2||x||_2^2
+\end{eqnarray}
+From projection in (\ref{eq5}) and virtual controls (\ref{eq12}), we have
+\begin{equation}\label{eq40}
+\left( {\begin{array}{cc}
+  1 & 0 \\
+  0 & 1
+\end{array}}
+\right)\left( {\begin{array}{c}
+  x_1 \\
+  x_2
+\end{array}}
+\right)=\left( {\begin{array}{cc}
+  1 & 0\\
+  -(k_1+\frac{1}{2e_1}) & 1
+\end{array}}
+\right)\left( {\begin{array}{c}
+  z_1 \\
+  z_2
+\end{array}}
+\right)
+\end{equation}
+The following inequality can be obtained
+\begin{equation}\label{eq41}
+||x||_2\leq (2+(k_1+\frac{1}{2e_1})^2)^{\frac{1}{2}}||z||_2
+\end{equation}
+So inequality (\ref{eq39}) can be rewritten as
+%\begin{eqnarray}\label{eq42}
+%\dot V_i&\leq&-\sum\limits_{i=1,2}k_iz_i^2-(\sum\limits_{i\in \bar U_{it}}\rho_i|b_i|)\frac{l_\varrho}{2}||\tilde{\varrho}||^2\nonumber\\
+%&&-\frac{1}{2}l_\theta||\tilde{\theta}||^2+[(\frac{e_1}{2}+\frac{e_{21}}{2}(k_1+\frac{1}{2e_1}))\delta_1^2+\frac{e_{22}}{2}\delta_2^2]\nonumber\\
+%&&(2+(k_1+\frac{1}{2e_1})^2)||z||_2^2+\Pi_i
+%\end{eqnarray}
+\begin{eqnarray}\label{eq42}
+&&\dot V_i\leq-\sum\limits_{i=1,2}k_iz_i^2+(2+(k_1+\frac{1}{2e_1})^2)\\
+&&[(\frac{e_1}{2}+\frac{e_{21}}{2}(k_1+\frac{1}{2e_1}))\delta_1^2+\frac{e_{22}}{2}\delta_2^2]||z||_2^2\nonumber
+\end{eqnarray}
+In order to stabilize the system, the following requirement on design parameters can be established
+\begin{equation}\label{eq43}
+\left\{ {\begin{array}{cc}
+  k_1\geq [(\frac{e_1}{2}+\frac{e_{21}}{2}(k_1+\frac{1}{2e_1}))\delta_1^2+\frac{e_{22}}{2}\delta_2^2](2+(k_1+\frac{1}{2e_1})^2) \\ \\
+  k_2\geq [(\frac{e_1}{2}+\frac{e_{21}}{2}(k_1+\frac{1}{2e_1}))\delta_1^2+\frac{e_{22}}{2}\delta_2^2](2+(k_1+\frac{1}{2e_1})^2)
+\end{array}}
+\right.
+\end{equation}
+Clearly, the second inequality is easy to be realized by choosing $k_2$ big enough. So the key to solve the problem relies on how to select $k_2$, such that the first inequality is satisfied.
+First about the existence of a positive constant $\delta^*$ such that for all $\delta_i<\delta^*$, design parameters $k_1$ can be choosen to make the first inequality hold. For a group of design parameters $k_1^*, e_1^*, e_{21}^*, e_{22}^*$, clearly there exists a $\delta^*$ making
+\begin{equation}\label{eq44}
+\Phi^*=[(\frac{e_1^*}{2}+\frac{e_{21^*}}{2}(k_1^*+\frac{1}{2e_1^*}))(\delta^*)^2+\frac{e_{22}^*}{2}(\delta^*)^2](2+(k_1^*+\frac{1}{2e_1^*})^2)
+\end{equation}
+small enough and then satisfying
+\begin{equation}\label{eq45}
+k_1^*>\Phi^*
+\end{equation}
+So for all $\delta_i<\delta^*$, we have
+\begin{eqnarray}\label{eq46}
+&&[(\frac{e_1^*}{2}+\frac{e_{21^*}}{2}(k_1^*+\frac{1}{2e_1^*}))(\delta_1)^2+\frac{e_{22}^*}{2}(\delta_2)^2]\nonumber\\
+&&(2+(k_1^*+\frac{1}{2e_1^*})^2)\leq\Phi^*<k_1^*
+\end{eqnarray}
+Namely, for above $\delta^*$ when $\delta_i<\delta^*$ design parameters $k_1^*, e_1^*, e_{21}^*, e_{22}^*$ can make the first inequality of (\ref{eq43}) hold. Letting
+\begin{equation}\label{eq47}
+k^*\triangleq k_2^*=k_1^*
+\end{equation}
+we can get
+%\begin{eqnarray}\label{eq48}
+%\dot V_i\leq-\ell\sum\limits_{i=1}^2z_i^2-(\sum\limits_{i\in \bar U_{it}}\rho_i|b_i|)\frac{l_\varrho}{2}||\tilde{\varrho}||^2-\frac{1}{2}l_\theta||\tilde{\theta}||^2+\Pi_i
+%\end{eqnarray}
+\begin{eqnarray}\label{eq48}
+\dot V_i\leq-\ell\sum\limits_{i=1}^2z_i^2
+\end{eqnarray}
+where
+\begin{equation}\label{eq49}
+\ell=k^*-\Phi^*>0
+\end{equation}
+%Similar to [5] and [6], letting
+%\begin{equation}\label{eq50}
+%\chi=(z_1, z_2, \tilde\theta^T, \tilde\varrho^T)
+%\end{equation}
+%We can get
+%\begin{eqnarray}\label{eq51}
+%\dot V_i\leq-\hbar_1||\chi||_2^2+\Pi_i
+%\end{eqnarray}
+%where
+%\begin{eqnarray}\label{eq52}
+%\hbar_1=min\{\ell, \frac{l_\varrho}{2}\sum\limits_{i\in \bar U_{it}}\rho_i|b_i|, \frac{1}{2}l_\theta\}
+%\end{eqnarray}
+
+ From (\ref{eq48}), we know $V_i$ is non increasing in time interval $[T_i, T_{i+1})$. So we can get $V_j(T_{i+1}^-)\leq{V_i(T_i^+)}$. When $i=0$, it is $V_0(T_{1}^-)\leq{V_0(0)}$. It can be conclude that all signals $z_i$, $\tilde{\theta}$, $\tilde{\varrho}$ are bounded in the time interval $[0,T_1)$. Noting that the difference between $V_1(T_1^+)$ and $V_0(T_1^-)$ is only the coefficients in front of the term $\tilde\varrho^T\Gamma_\varrho\tilde\varrho$. Since all the possible jumping on $\varrho$ are bounded, $V_1(T_1^+)$ is bounded, then $V_1(T_2^-)$ is bounded. Similar to the above analysis, we can get $V_i(T_{i+1}^-)$ is bounded from the bound of $V_i(T_i^+)$ and $V_{i-1}(T_i^-)$. Also we can get $V_f(T_f^+)$ is bounded by the bound of $V_{f-1}(T_f^-)$ and $V_{f-1}(T_{f-1}^+)$. Therefore, $V_f$ is non increasing in time interval $(T_f,\infty)$. Namely, it can be shown that $V_f(t)\leq V_f(T_f^+)$. Then we can get $z,\tilde{\theta},\tilde{\varrho}$ are all bounded in $[0,\infty]$. Easily, we can get $lim_{t\rightarrow{\infty}}|y|=0$ from (\ref{eq48}).
+ $\Box\Box\nonumber$
+
+\textbf{Remark 4:}
+\begin{itemize}
+  \item In order to prove the derivative of $V_i$ being non-positive in time interval $[T_i, T_{i+1})$, linear transformation between vector $x$ and $z$ is established in the controller design. Such analysis is quite different from standard backstepping procedures.
+  \item The value of parameter $\delta^*$ is difficult to obtain for a general uncertain nonlinear system, especially for high order nonlinear systems. If so, the significance of our results is to show the existence of such a parameter. In other words, when magnitude $\delta_i$ of time delay term $h_i(\cdot)$ satisfying the condition that $\delta_i<\delta^*$, the controller shown in this paper can stabilize system (\ref{eq1}).
+\end{itemize}
+
+\section{Simulation Studies}
+In this section, the results of simulation are presented  to verify the effectiveness of the
+proposed robust adaptive neural network tracking control law with hysteresis input. Following second-order system as considered:
+\begin{eqnarray}
+	&&\dot{x}_1=x_2+h_1(x_1(t-\tau),x_2(t-\tau))\nonumber\\
+	&&\dot{x}_2=(2+cos(x_1 x_2))\theta+u+h_2(x_1(t-\tau),x_2(t-\tau))\nonumber\\
+	&&y=x_1
+\end{eqnarray}
+where $x_1$, $x_2$ are system states and $u$ is the input. $\theta$ is an unknown parameter and $h_1(x_1(t-\tau),x_2(t-\tau))$, $h_2(x_1(t-\tau),x_2(t-\tau))$ are known smooth functions and $\tau\in R$ is unknown time delay of state x. Consider $h_1$, $h_2$ as
+\begin{align}
+	h_1(t-\tau)&=0.05(sin x_1 (t-\tau)+cos x_2 (t-\tau))\\
+	h_2(t-\tau)&=0.04(cos x_1 (t-\tau)+sin x_2 (t-\tau))
+\end{align}
+Such that we have 
+\begin{align}
+	&h_1(t-\tau)<0.1 \\
+	&h_2(t-\tau)<0.1
+\end{align}
+Satisfy Assumption 1.
+In the simulation,
+following parameters are choosen: $theta=0.8$, $\tau=0.2$, $e_1=0.1$, $e_{21}=0.04$, $e_{22}=0.3$. $\delta_1=\delta_2=0.1$. Then we choose $k_1=k_2=40$ such that equation group \eqref{eq43} holds. $\Gamma_{\theta}$ and $\Gamma_{\varrho}$ are update law gain, in order to make simulation faster, we could choose them as big as possible. Fig.1 shows the states $x_1$ and $x_2$ with time.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{picture/output}
+	\caption{States $x_1(t)$ and $x_2(t)$}
+	\label{fig:output}
+\end{figure}
+
+Remember $y=x_1(t)$, $x_1(t)$ and $x_2(t)$ tend to 0 with time. Therefore verify Theorem 1.
+
+
+
+%%%\begin{verbatim}
+%%\begin{figure}
+%%\centering
+%%\includegraphics[totalheight=80mm,width=150mm]{picture/error_1.eps}
+%%\caption{Tracking errors (Failure and No failure)}
+%%\end{figure}
+%%%\end{verbatim}
+%%\begin{figure}
+%%\centering
+%%\includegraphics[totalheight=80mm,width=150mm]{picture/input_f.eps}
+%%\caption{Control inputs (Failure)}
+%%\end{figure}
+%%\begin{figure}
+%%\centering
+%%\includegraphics[totalheight=80mm,width=150mm]{picture/input_n.eps}
+%%\caption{Control inputs (No failure)}
+%%\end{figure}
+%%\begin{figure}
+%%\centering
+%%\includegraphics[totalheight=80mm,width=150mm]{picture/constracting1.eps}
+%%\caption{Tracking errors (Different three cases)}
+%%\end{figure}
+%%\begin{figure}
+%%\centering
+%%\includegraphics[totalheight=80mm,width=150mm]{picture/estimation_curves.eps}
+%%\caption{Estimations of attenuation factors}
+%%\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}
+%\centering \caption{\textcolor[rgb]{1.00,0.00,0.00}{Tracking Error($y_r=sin(t)$)}}
+%\centering\includegraphics[totalheight=50mm,width=80mm]{picture/tra_1.eps}
+%%\label{fig:side:a}
+%\end{figure}
+%\begin{figure}
+%\centering \caption{\textcolor[rgb]{1.00,0.00,0.00}{Estimation of $\theta_1, \theta_2, \theta_3, \theta_4$($y_r=sin(t)$)}}
+%\includegraphics[totalheight=50mm,width=80mm]{picture/estimation_1_1-4.eps}
+%%\label{fig:side:a}
+%\end{figure}
+%\begin{figure}
+%\centering \caption{\textcolor[rgb]{1.00,0.00,0.00}{Estimation of $\theta_5$($y_r=sin(t)$)}}
+%\includegraphics[totalheight=50mm,width=80mm]{picture/estimation_1_5.eps}
+%%\label{fig:side:b}
+%\end{figure}
+%\begin{figure}
+%\centering \caption{\textcolor[rgb]{1.00,0.00,0.00}{Estimation of $\theta_6$($y_r=sin(t)$)}}
+%\includegraphics[totalheight=50mm,width=80mm]{picture/estimation_1_6.eps}
+%%\label{fig:side:a}
+%\end{figure}
+%\begin{figure}
+%\centering \caption{\textcolor[rgb]{1.00,0.00,0.00}{Tracking Error($y_r=1-e^{-t}$)}}
+%\centering\includegraphics[totalheight=50mm,width=80mm]{picture/tra_2.eps}
+%%\label{fig:side:a}
+%\end{figure}
+%\begin{figure}
+%\centering \caption{\textcolor[rgb]{1.00,0.00,0.00}{Estimation of $\theta_1, \theta_2, \theta_3, \theta_4$($y_r=1-e^{-t}$)}}
+%\includegraphics[totalheight=50mm,width=80mm]{picture/estimation_2_1-4.eps}
+%%\label{fig:side:a}
+%\end{figure}
+%\begin{figure}
+%\centering \caption{\textcolor[rgb]{1.00,0.00,0.00}{Estimation of $\theta_5$($y_r=1-e^{-t}$)}}
+%\includegraphics[totalheight=50mm,width=80mm]{picture/estimation_2_5.eps}
+%%\label{fig:side:b}
+%\end{figure}
+%\begin{figure}
+%\centering \caption{\textcolor[rgb]{1.00,0.00,0.00}{Estimation of $\theta_6$($y_r=1-e^{-t}$)}}
+%\includegraphics[totalheight=50mm,width=80mm]{picture/estimation_2_6.eps}
+%%\label{fig:side:a}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%\subsection{Subsection Heading Here}
+%%%%%Subsection text here.
+
+% needed in second column of first page if using \IEEEpubid
+%\IEEEpubidadjcol
+
+%%%%%\subsubsection{Subsubsection Heading Here}
+%%%%%Subsubsection text here.
+
+
+% An example of a floating figure using the graphicx package.
+% Note that \label must occur AFTER (or within) \caption.
+% For figures, \caption should occur after the \includegraphics.
+% Note that IEEEtran v1.7 and later has special internal code that
+% is designed to preserve the operation of \label within \caption
+% even when the captionsoff option is in effect. However, because
+% of issues like this, it may be the safest practice to put all your
+% \label just after \caption rather than within \caption{}.
+%
+% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
+% option should be used if it is desired that the figures are to be
+% displayed while in draft mode.
+%
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=2.5in]{myfigure}
+% where an .eps filename suffix will be assumed under latex,
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+% via \DeclareGraphicsExtensions.
+%\caption{Simulation Results}
+%\label{fig_sim}
+%\end{figure}
+
+% Note that IEEE typically puts floats only at the top, even when this
+% results in a large percentage of a column being occupied by floats.
+
+
+% An example of a double column floating figure using two subfigures.
+% (The subfig.sty package must be loaded for this to work.)
+% The subfigure \label commands are set within each subfloat command, the
+% \label for the overall figure must come after \caption.
+% \hfil must be used as a separator to get equal spacing.
+% The subfigure.sty package works much the same way, except \subfigure is
+% used instead of \subfloat.
+%
+%\begin{figure*}[!t]
+%\centerline{\subfloat[Case I]\includegraphics[width=2.5in]{subfigcase1}%
+%\label{fig_first_case}}
+%\hfil
+%\subfloat[Case II]{\includegraphics[width=2.5in]{subfigcase2}%
+%\label{fig_second_case}}}
+%\caption{Simulation results}
+%\label{fig_sim}
+%\end{figure*}
+%
+% Note that often IEEE papers with subfigures do not employ subfigure
+% captions (using the optional argument to \subfloat), but instead will
+% reference/describe all of them (a), (b), etc., within the main caption.
+
+
+% An example of a floating table. Note that, for IEEE style tables, the
+% \caption command should come BEFORE the table. Table text will default to
+% \footnotesize as IEEE normally uses this smaller font for tables.
+% The \label must come after \caption as always.
+%
+%\begin{table}[!t]
+%% increase table row spacing, adjust to taste
+%\renewcommand{\arraystretch}{1.3}
+% if using array.sty, it might be a good idea to tweak the value of
+% \extrarowheight as needed to properly center the text within the cells
+%\caption{An Example of a Table}
+%\label{table_example}
+%\centering
+%% Some packages, such as MDW tools, offer better commands for making tables
+%% than the plain LaTeX2e tabular which is used here.
+%\begin{tabular}{|c||c|}
+%\hline
+%One & Two\\
+%\hline
+%Three & Four\\
+%\hline
+%\end{tabular}
+%\end{table}
+
+
+% Note that IEEE does not put floats in the very first column - or typically
+% anywhere on the first page for that matter. Also, in-text middle ("here")
+% positioning is not used. Most IEEE journals use top floats exclusively.
+% Note that, LaTeX2e, unlike IEEE journals, places footnotes above bottom
+% floats. This can be corrected via the \fnbelowfloat command of the
+% stfloats package.
+
+
+
+\section{Conclusion}
+A robust adaptive state feedback control scheme is proposed by using backstepping technique for second oreder time delay systems with unknown actuator failures. unlike existing results of time delay systems by using backstepping technology, the bounding function of time delay term $h_i(x_1, x_2)$ in system (\ref{eq1}) is allowed to depend on all system states. The boundedness of all signals of the closed-loop system are ensured by the proposed control law and corresponding update laws. Simulation studies verify the effectiveness of the proposed control scheme.
+
+
+
+
+% if have a single appendix:
+%\appendix[Proof of the Zonklar Equations]
+% or
+%\appendix  % for no appendix heading
+% do not use \section anymore after \appendix, only \section*
+% is possibly needed
+
+% use appendices with more than one appendix
+% then use \section to start each appendix
+% you must declare a \section before using any
+% \subsection or using \label (\appendices by itself
+% starts a section numbered zero.)
+%
+% Can use something like this to put references on a page
+% by themselves when using endfloat and the captionsoff option.
+\ifCLASSOPTIONcaptionsoff
+  \newpage
+\fi
+
+
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://mirror.ctan.org/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+%\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+\begin{thebibliography}{1}
+\bibitem{n1} Y. Xu, R. Lu, P. Shi, J. Tao, S. Xie, ``Robust estimation for neural networks with randomly occurring distributed delays and markovian jump coupling", \emph{IEEE Transactions on Neural Networks and Learning Systems}, DIO:10.1109/TNNLS.2016.2636325, 2017.
+
+\bibitem{n2} R. Q. Lu, H. Y. Wu, J. J. Bai, ``New delay-dependent robust stability criteria for uncertain neutral systems with mixed delays", \emph{Journal of the Franklin Institute}, vol. 351, no. 3, pp.1386-1399, 2014.
+
+\bibitem{n3} Z. G. Wu, P. Shi, H. Y. Su, and J. Chu, ``Stochastic synchronization of Markovian jump neural networks with time-varying delay using sampled-data, \emph{IEEE Transactions on Cybernetics}", vol. 43, no. 6, pp. 1796-1806, 2013.
+
+\bibitem{n4} J. N. Li, L. S. Li, ``Mean square exponential stability for stochastic discrete-time recurrent neural networks with mixed time delays", \emph{ Neurocomputing}, vol. 151, pp. 790-797, 2015.
+
+\bibitem{n5} Z. G. Wu, P. Shi, H. Y. Su, and J. Chu, ``Passivity analysis for discrete-time stochastic Markovian jump neural networks with mixed time-delays", \emph{IEEE Transactions on Neural Networks}, vol. 22, no. 10, pp. 1566-1575, 2011.
+
+\bibitem{n6} S. S. Ge, F. Hong, T. H. Lee, ``Robust adaptive control ofnonlinear systems with unknown time delays", \emph{Automatica}, vol. 41, no. 7, pp. 1181-1190, 2005.
+
+\bibitem{n7} M. Hashemi, J. Askari, J. Ghaisari, M. Kamali, ``Adaptive compensation for actuator failure in a class of non-linear time-delay systems", \emph{ IET Control Theory Appl.}, vol. 9, no. 5, pp. 710-722, 2015.
+
+\bibitem{n8} J. P. Cai, C. Y. Wen, H. Y. Su, et al., ``Robust adaptive failure compensation of hysteretic actuators for a class of uncertain nonlinear systems", \emph{IEEE Trans. on Automatic Control}, vol. 58, no. 9, pp. 2388-2394, 2013.
+
+\bibitem{n9} J. P. Cai, C. Y. Wen, H. Y. Su, ``Adaptive inverse control for parametric strict feedback systems with unknown failures of hysteretic actuators", \emph{International Journal of Robust and Nonlinear Control}, vol. 25, no. 6, pp. 824-841, 2015.
+
+\bibitem{n10} B. Xiao, S. Yin, "Velocity-free fault-tolerant and uncertainty attenuation control for a class of nonlinear systems", \emph{IEEE Transactions on Industrial Electronics}, vol. 63, no. 7, pp.4400-4411, 2016.
+
+\bibitem{n11} Y. Xu, R. Lu, P. Shi, H. Li, S. Xie, "Finite-time distributed state estimation over sensor networks with round-robin protocol and fading channels", \emph{IEEE Transactions on Cybernetics}, DIO:10.1109/TCYB.2016.2635122, 2016.
+
+\bibitem{n12} B. Xiao, S. Yin, O. Kaynak, "Tracking control of robotic manipulators with uncertain kinematics and dynamics", \emph{IEEE Transactions on Industrial Electronics}, vol. 63, no. 10, pp.6439-6449, 2016.
+
+\bibitem{n13} X. Zhao, H. Yang, G. Zong, ``Adaptive neural hierarchical sliding mode control of nonstrict-feedback nonlinear systems and an application to electronic circuits", \emph{ IEEE Transactions on Systems, Man, and Cybernetics: Systems}, vol. 47, no. 7, pp. 1394-1404, 2017.
+
+\bibitem{n14} S. C Tong, Y. M. Li, ``Adaptive fuzzy output feedback tracking backstepping control of strict-feedback nonlinear systems with unknown dead zones", \emph{IEEE Transactions on Fuzzy Systems}, vol. 20, no. 1, pp.168-180, 2012.
+
+\bibitem{n15} Y. Chen, ``Random input describing functions on backlash limiter characteristic and relay characteristic with hysteresis and deadzone"(in chinese), \emph{Journal of Northwestern Polytechnical University}, vol. 3, no. 4, pp. 499-504, 1985.
+
+\bibitem{n16} R. S. Rastko, L. L. Frank, ``Deadzone compensation in motion control systems using neural networks", \emph{IEEE
+    Transactions on Automatic Control}, vol. 45, no. 4, pp. 602-613, 2000.
+
+\bibitem{n17} S. C Tong, Y. M. Li, ``Adaptive fuzzy output feedback control of MIMO nonlinear systems with unknown dead-zone input", \emph{IEEE Transactions on Fuzzy Systems}, vol. 21, no. 1, pp.134-146, 2013.
+
+\bibitem{n18} S. C Tong, Y. M. Li, S. Sui, ``Adaptive fuzzy output feedback control for switched nonstrict-feedback nonlinear systems with input nonlinearities", \emph{IEEE Transactions on Fuzzy Systems}, vol. 24, no. 6, pp.1426-1440, 2016.
+
+\bibitem{n19} J. Zhou, M. J. Era, J. M. Zurada, ``Adaptive neural network control of uncertain nonlinear systems with nonsmooth actuator nonlinearities", \emph{Neurocomputing}, vol. 70, pp. 1062-1070, 2007.
+
+\bibitem{n20} Z. G. Wu, P. Shi, H. Y. Su, and J. Chu, ``Asynchronous $l_2-l_\infty$ filtering for discrete-time stochastic Markov jump systems with randomly occurred sensor nonlinearities", \emph{Automatica}, vol. 50, no. 1, pp. 180-186, 2014.
+
+\bibitem{n21} H. Wang, B. Chen, K. Liu, X. Liu, C. Lin, ``Adaptive neural tracking control for a class of nonstrict-feedback stochastic nonlinear systems with unknown backlash-like hysteresis", \emph{IEEE Transactions on Neural Networks and Learning Systems}, vol. 25, no. 5, pp.947-958, 2014.
+
+%\bibitem{cj53} R. Q. Lu, W. W. Yu, J. H. Lu, A. K. Xue, ``Synchronization on Complex Networks of Networks", \emph{IEEE Transactions on Neural Networks and Learning Systems}, vol. 25, no. 11, pp.2110-2118, 2014.
+
+\bibitem{n22} W. He, Y. Chen, Z. Yin, ``Adaptive neural network control of an uncertain robot with full-state constraints", \emph{IEEE Transactions on Cybernetics}, vol. 46, no. 3, pp.620-629, 2016.
+
+\bibitem{n23} J. Zhou, C. Wen, \emph{Adaptive Backstepping Control of Uncertain Systems}. Verlag Berlin Heidelberg: Springer, 2007.
+
+%\bibitem{c2} R. Miller, W. Ribbens, ``The effects of icing on the longitudinal dynamics of an icing research aircraft", \emph{The 37th AIAA Aerospace Sciences Meeting and Exhibit}, pp. 1-8, 1999.
+
+%\bibitem{fcj9} B. Yao, M. Tomizukai, "Adaptive robust control of SISO nonlinear systems in a semi-strict feedback form", \emph{Automatica}, vol. 33, no. 5, pp.893-900, 1997.
+
+\end{thebibliography}
+
+% biography section
+%
+% If you have an EPS/PDF photo (graphicx package needed) extra braces are
+% needed around the contents of the optional argument to biography to prevent
+% the LaTeX parser from getting confused when it sees the complicated
+% \includegraphics command within an optional argument. (You could create
+% your own custom macro containing the \includegraphics command to make things
+% simpler here.)
+%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
+% or if you just want to reserve a space for a photo:
+
+%\begin{IEEEbiography}{Michael Shell}  带照片的格式
+%Biography text here.
+%\end{IEEEbiography}
+
+% if you will not have a photo at all:
+\begin{IEEEbiographynophoto}{Cai Jian-Ping}
+Received his Ph.D. degree from Zhejiang University in 2014. He is currently a associate
+professor in Zhejiang University of Water Resources and Electric Power. His main research interests
+include nonlinear systems and adaptive control. E-mail:
+caijianping2001@163.com.
+\end{IEEEbiographynophoto}
+
+\begin{IEEEbiographynophoto}{Haoyi Que}
+was born in 1988. He received the B.S. degrees from Huazhong University of Science and Technology, Wuhan, China, in 2013. He is currently pursuing the Ph.D. degree in control science and engineering with Zhejiang University, Hangzhou, China. His current research interests include complex dynamic network, nonlinear system and adaptive control.
+\end{IEEEbiographynophoto}
+
+
+\begin{IEEEbiographynophoto}{Shen Lu-Juan}
+Received her Ph.D. degree from
+Zhejiang University in 2013. She is currently a associate
+professor in Zhejiang University of Water Resources
+and Electric Power. Her main research interest is application
+of mathematics. E-mail: shenlj@zjweu.edu.cn.
+\end{IEEEbiographynophoto}
+
+% insert where needed to balance the two columns on the last page with
+% biographies
+%\newpage
+
+%\begin{IEEEbiographynophoto}{Jane Doe}
+%Biography text here.
+%\end{IEEEbiographynophoto}
+
+% You can push biographies down or up by placing
+% a \vfill before or after them. The appropriate
+% use of \vfill depends on what kind of text is
+% on the last page and whether or not the columns
+% are being equalized.
+
+\vfill
+
+% Can be used to pull up biographies so that the bottom of the last one
+% is flush with the other column.
+%\enlargethispage{-5in}
+
+
+
+% that's all folks
+\end{document}
+
+

@@ -1,0 +1,5 @@
+PWD c:/Users/MimuTao/Desktop/Introcuction/Incroduction
+INPUT c:/MimuTao/Tex/TexLive/texmf.cnf
+INPUT c:/MimuTao/Tex/TexLive/texmf-dist/web2c/texmf.cnf
+INPUT c:/MimuTao/Tex/TexLive/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT c:/Users/MimuTao/Desktop/Introcuction/Incroduction/bare_conf.tex
