@@ -527,31 +527,31 @@ Consider a class of discrete-time MJLS with control saturation on a probability 
 	\right.
 \end{equation}\\
 %where$A_{r(k)}, F_{r(k)}, B_{r(k)}, E^x_{r(k)}, C^z_{r(k)}, G^z_{r(k)}, D^z_{r(k)}$ and $E^z_{r(k)}$ represent the time-varying system matrices, all of which are pre-known and real, $x_k \in \mathbb{R}^{n_x}, u_k \in \mathbb{R}^{n_u}, y_k\in \mathbb{R}^{n_y}, z_k\in \mathbb{R}^{n_z}$, and $w_k\in\mathbb{R}^{n_w}$ are respectively the state, the control input, the output related to the nonlinearity, the controlled output and the exogenous disturbance vector of system \eqref{syseq} at the instant k.  
-where$A_{r(k)}, F_{r(k)}, B_{r(k)}, E^x_{r(k)}, C^z_{r(k)}, G^z_{r(k)}, D^z_{r(k)}$ and $E^z_{r(k)}$ represent the time-varying system matrices, all of which are pre-known and real, $x_k \in \mathbb{R}^{n}, u_k \in \mathbb{R}^{m}, y_k\in \mathbb{R}^{p}, z_k\in \mathbb{R}^{q}$, and $w_k\in\mathbb{R}^{r}$ are respectively the state, the control input, the output related to the nonlinearity, the controlled output and the exogenous disturbance vector of system \eqref{syseq} at the instant $k$.  
+where $x_k\in\mathbb{R}^{n}, u_k\in\mathbb{R}^{m}, y_k\in\mathbb{R}^{p}, z_k\in\mathbb{R}^{q}$, and $w_k\in\mathbb{R}^{r}$ represent the state, the control input, the output related to the nonlinearity, the controlled output and the exogenous disturbance vector respectively. $A_{r(k)}, F_{r(k)}, B_{r(k)}, E^x_{r(k)}, C^z_{r(k)}, G^z_{r(k)}, D^z_{r(k)}$ and $E^z_{r(k)}$ represent the time-varying system matrices, all of which are pre-known and real.  
 %Where $x_k\in\mathbb{R}^{n_x}$ is the state vector, $u_k\in\mathbb{R}^{n_u}$ is the control input, $y_k\in\mathbb{R}^{n_y}$ is the system output, $z_k\in\mathbb{R}^{n_z}$ is the control output, nad $w_k\in\mathbb{R}^{n_w}$ is the exogenous disturbance in $l_2[0,\infty)$, at the instant $k$. The saturation function $\rm{sat}(\cdot)$ is defined as follows: for any $u\in\mathbb{R}^{n_u}, \mathrm{sat}(u)_{(\ell)}=\mathrm{sign}u_{(\ell)} \min(\rho_{(\ell)},|u_{(\ell)}|),\forall\ell=1,\dots,n_u\}$, where $\ell$ represent the $\ell$th element of the vector and  the vector $0<\rho<\mathbb{R}^n_u$ is assumed to be given. $\{r(k),k\geq0\}$ is a Markov chain taking values in a finite set $\mathcal{N}=\{1,2,\dots,N\}$ with mode TPs:
 %The saturation function $\rm{sat}(\cdot)$ is defined as follows: for any $u\in\mathbb{R}^{n_u}, \mathrm{sat}(u)_{(\ell)}=\mathrm{sign}u_{(\ell)} \min(\rho_{(\ell)},|u_{(\ell)}|),\forall\ell=1,\dots,n_u\}$, where $\ell$ represent the $\ell$th element of the vector and  the vector $0<\rho<\mathbb{R}^n_u$ is assumed to be given. $\{r(k),k\geq0\}$ is a Markov chain taking values in a finite set $\mathcal{N}=\{1,2,\dots,N\}$ with mode TPs:
 The saturation function $\rm{sat}(\cdot)$ is defined as follows:
 \begin{equation}
 \mathrm{sat}(u)_{(\ell)}=\mathrm{sign}(u_{(\ell)}) \min(\rho_{(\ell)},|u_{(\ell)}|),
 \end{equation}
-where $\ell \in \{1,\cdots,m\}$ represent the $\ell$th element of the vector and  the vector $0<\rho\in\mathbb{R}^{m}$ is assumed to be given. $\{r(k),k\geq0\}$ is a Markov chain taking values in a positive integer set $\mathcal{N}=\{1,2,\dots,N\}$ with mode TPs:
+where $\ell \in \{1,\cdots,m\}$ represent the $\ell$th element of the vector and  the pre-given vector $\rho>0$. $\{r(k),k\geq0\}$ is a Markov chain taking values in a positive integer set $\mathcal{N}=\{1,2,\dots,N\}$ with mode TPs:
 \begin{equation}
 	\Pr\{r(k+1)=j|r(k)=i\}=\pi_{ij}
 \end{equation}
-where for all $i,j\in\mathcal{N}$, $\pi_{ij}\in[0,1]$, and $\sum_{j=0}^{N}\pi_{ij}=1$ for each mode $i$. The system matrices in \eqref{syseq} at instant $k$ can be expressed as $A_i,F_i,B_i,E^x_i,C^z_i,G^z_i,D^z_i$ and $E^z_i$, which are real known constant matrices with appropriate dimensions, and the related transition probability matrix is marked as $\mathit{\Pi}=\{\pi_{ij}\}$.\\
+Clearly, for all $i,j\in\mathcal{N}$, $\pi_{ij}\in[0,1]$, and $\sum_{j=0}^{N}\pi_{ij}=1$ for each mode $i$. The system matrices in \eqref{syseq} at instant $k$ can be expressed as $A_i,F_i,B_i,E^x_i,C^z_i,G^z_i,D^z_i$ and $E^z_i$, which are real known constant matrices with appropriate dimensions, and the related transition probability matrix is described as $\mathit{\Pi}=\{\pi_{ij}\}$.\\
 \\
-\textbf{Assumption 1:} $\varphi(\cdot): \mathbb{R}^{p}\rightarrow\mathbb{R}^{p}$ satisfy:\\ 
-(1) $\varphi(0)=0$ and,  \\
-(2) there exist a diagonal positive definite matrix $\varOmega \in\mathbb{R}^{p\times p}$ such that $\forall y\in\mathbb{R}^{p}$ and $\forall \ell \in\{1,\dots,p\}$,
+\textbf{Assumption 1:} The function $\varphi(\cdot): \mathbb{R}^{p}\rightarrow\mathbb{R}^{p}$ satisfies:\\ 
+(1) $\varphi(0)=0$ and \\
+(2) there exists a diagonal positive definite matrix $\varOmega \in\mathbb{R}^{p\times p}$ such that: 
 \begin{equation}\label{cbs}
 \varphi_{(\ell)}(y)[\varphi(y)-\varOmega y ]_{(\ell)}\leq 0.
 \end{equation}
-And we say in this case that the nonlinearity $\varphi(\cdot) $ satisfy it's own cone bounded sector conditions and to be decentralized. From \eqref{cbs} we have $\forall y\in\mathbb{R}^p$:
+where for all $y\in\mathbb{R}^{p}$, $\ell \in\{1,\dots,p\}$. And in this case we say that the nonlinearity $\varphi(\cdot) $ satisfies it's own cone bounded sector conditions and to be decentralized. According to \eqref{cbs} we have:
 \begin{equation}\label{scieq}
 	SC(y,\varLambda):= \varphi^{\mathrm{'}}(y)\varLambda[\varphi(y)-\varOmega y]\leq0,
 \end{equation}
 %where $\varLambda$ is any diagonal postive semidefinite matrix, and $\varOmega$ is consider to be given. From the Assumption 1, we have that inequality \label{scieq} yields to $[\varOmega y]_{(\ell)}[\varphi(y)-\varOmega y]_{(\ell)}\leq0, \forall\ell=1,\dots,n_y, \forall y\in\mathbb{R}^{n_y}$, which implies: $\forall y \in \mathbb{R}^{n_y}, 0\leq\varphi^{\mathrm{T}}(y)\varLambda\varphi(y) \leq \varphi^{\mathrm{T}}(y)\varLambda\varphi(y) \leq y^{\mathrm{T}}\varOmega\varLambda\varOmega y$.
-where $\varLambda$ is any diagonal positive semidefinite matrix, and $\varOmega$ is consider to be given. From the Assumption 1, we get that:
+where $\varLambda$ is any diagonal positive semidefinite matrix, and $\varOmega$ is pre-given. From the Assumption 1, we get:
 \begin{equation}
 [\varOmega y]_{(\ell)}[\varphi(y)-\varOmega y]_{(\ell)}\leq0,
 \end{equation}
@@ -559,13 +559,13 @@ which implies:
 \begin{equation}
  0\leq\varphi^{\mathrm{'}}(y)\varLambda\varphi(y) \leq \varphi^{\mathrm{'}}(y)\varLambda\varphi(y) \leq y^{\mathrm{'}}\varOmega\varLambda\varOmega y
 \end{equation}\\
-\textbf{Definition 1:} System \eqref{syseq} is said to be locally stochastically stable if for $w_(k)=0$ and any initial condition $x_0\in \mathcal{D}_0$, $r(0)\in \mathcal{N}$, the following holds:
+\textbf{Definition 1:} System \eqref{syseq} is said to be locally stochastically stable if for $w_(k)=0$ and any initial condition $x_0\in \mathcal{D}_0$, $r(0)\in \mathcal{N}$, the following formulation holds:
 \begin{equation}
 	\|x\|^2_2=\sum_{k=0}^{\infty}\mathbb{E}[\|x_k\|^2]<\infty.
 \end{equation} 
-In this case the set $\mathcal{D}_0 \subset \mathbb{R}^{p}$ is said to be the domain of stochastic stability of the origin. \\
+Where in this case the set $\mathcal{D}_0 \subset \mathbb{R}^{p}$ is said to be the domain of stochastic stability of the origin. \\
 \\
-Set $\mathcal{F}_k$ as the $\sigma$-field generated by the random variables $x_k$ and $r(k)$. We define next the class of exogenous disturbances with bounded energy and the finite $\ell_2$-induced norm.
+Define $\mathcal{F}_k$ as the $\sigma$-field generated by the random variables $x_k$ and $r(k)$. We define next the class of exogenous disturbances with bounded energy and the finite $\ell_2$-induced norm.
 \\
 \textbf{Definition 2}: For $\gamma>0$, set $\mathcal{W}_{\gamma}$ is defined as follows:
 \begin{equation}
@@ -574,7 +574,7 @@ Set $\mathcal{F}_k$ as the $\sigma$-field generated by the random variables $x_k
 		&\mathcal{F}_k\text{-measureable}, \text{and}\  \|w\|^2_2=\sum_{k=0}^{\infty}\mathbb{E}(\|w_k\|)^2<\frac{1}{\gamma}\}.\\
 	\end{split}
 \end{equation}
-The finite $\ell_2$-induced gain associated with the closed loop system \eqref{syseq} with $x_0=0$ between the disturbance $w=\{w_k\}_{k\in\mathbb{N}}$ and controlled output $z=\{z_k\}_{k\in\mathbb{N}}$ is equal or less than $\sqrt{\varrho}$ if for every $w\in\mathcal{W}_{\gamma}$ we have that
+The finite $\ell_2$-induced gain associated with the closed-loop system \eqref{syseq} with $x_0=0$ between the disturbance $w=\{w_k\}_{k\in\mathbb{N}}$ and controlled output $z=\{z_k\}_{k\in\mathbb{N}}$ is equal or less than $\sqrt{\varrho}$ if for every $w\in\mathcal{W}_{\gamma}$ then we have
 \begin{equation}
 \frac{1}{\varrho}\|z\|^2_2=\frac{1}{\varrho}\sum_{k=0}^{\infty}\mathbb{E}\left[\|z_k\|^2\right] \leq \|w\|^2_2=\sum_{k=0}^{\infty}\mathbb{E}\left[\|w_k\|^2\right].
 \end{equation}\\
@@ -583,15 +583,15 @@ In this paper, we consider the following controller:
 \begin{equation}\label{asycontroller}
 u_k=K_{\sigma(k)}x_k+\varGamma_{\sigma(k)}\varphi(y_k) 
 \end{equation}
-where $K_{\sigma(k)}\in \mathbb{N}^{m\times n}$ is a time-varying matrix standing for the controller gian matrix, and the $\varGamma_{\sigma(k)}\in \mathbb{N}^{n_u\times n_y}$ is a time-varying matrix standing for nonlinear output feedback gains, and the parameter $\{\sigma(k),k\geq0\}$ takes values in another pre-given positive integer set, which is marked as $\mathcal{M}=\{1,2,\dots,M\}$ subject to the pre-known conditional probability matrix $\varPhi=\{\mu_{im} \}$, the probabilities of which are defined by
+where $K_{\sigma(k)}\in \mathbb{N}^{m\times n}$ is a time-varying controller gain matrix, and $\varGamma_{\sigma(k)}\in \mathbb{N}^{m\times p}$ is a time-varying nonlinear output feedback gain matrix. The parameter $\{\sigma(k),k\geq0\}$ takes values in another pre-given positive integer set, which is marked as $\mathcal{M}=\{1,2,\dots,M\}$ subject to the pre-known conditional probability matrix $\varPhi=\{\mu_{im} \}$, the probabilities of which are defined by
 \begin{equation}
 \Pr\{\sigma(k)=m|r(k)=i\}=\mu_{im}.
 \end{equation}
 Where for all $i\in\mathcal{N}, m\in\mathcal{M}, \mu_{im}\in [0,1]$, and $\sum_{m=1}^{M}\mu_{im}=1$ for each $i\in\mathcal{N}$.\\
 \\
-\textbf{Remark 1}: In practice, the information of the system modes can not be fully accessed to controller or not fully accurate, that is, the actual modes of system are hidden to the controller, which leads to the controller don't synchronize with system modes. Thus, we introduce $\sigma(k)$ to present the relationship between system modes and controller modes, and the set $(r(k),\sigma(k),\varPi,\varPhi)$ constructs a hidden Markov model. \\
-\\
-In this paper, we define the dead-zone nonlinearity $\delta(u)$ as follows:$\delta(u)=u-\mathrm{sat}(u)$, for any $u\in\mathbb{R}^{m}$. Combing the asynchronous controller \eqref{asycontroller} and system \eqref{syseq} we have the following closed system.
+%\textbf{Remark 1}: In practice, the information of the system modes can not be fully accessed to controller or not fully accurate, that is, the actual modes of system are hidden to the controller, which leads to the controller don't synchronize with system modes. Thus, we introduce $\sigma(k)$ to present the relationship between system modes and controller modes, and the set $(r(k),\sigma(k),\varPi,\varPhi)$ constructs a hidden Markov model. \\
+%\\
+In this paper, we define the dead-zone nonlinearity $\delta(u)$ as follows:$\delta(u)=u-\mathrm{sat}(u)$, for any $u\in\mathbb{R}^{m}$. Combing the asynchronous controller \eqref{asycontroller} and system \eqref{syseq} we have the following closed system:
 \begin{equation}\label{close_system_equation}
 \left\{
 \begin{array}{lr}
@@ -608,9 +608,9 @@ z_k=&(C^z_i+D_i^zK_m)x_k+(G^z_i+D^z_i\varGamma_m)\varphi(y_k)\\
 \right.
 \end{equation} 
 \\
-We consider a generalized local sector condition $\delta(u)=u-\mathrm{sat}(u)$, and use $\rho$ to denotes the bounds of the saturation function $\mathrm{sat}(u)$, for given matrices $H_m\in\mathbb{R}^{n+p}$, we define the set $\mathcal{S}(H_m,\rho):=\{\xi\in\mathbb{R}^{n_x+n_y};-\rho\leq H_m\xi\leq\rho, \forall m\in \mathcal{M} \}$.
+We consider a generalized local sector condition $\delta(u)=u-\mathrm{sat}(u)$, and use $\rho$ to denote the bounds of saturation function $\mathrm{sat}(u)$. For given matrices $H_m\in\mathbb{R}^{n+p}$, we define the set $\mathcal{S}(H_m,\rho):=\{\xi\in\mathbb{R}^{n_x+n_y};-\rho\leq H_m\xi\leq\rho, \forall m\in \mathcal{M} \}$.
 \\
-\textbf{Lemma 3}. Consider $m\times(n+p)$-matrices $\widehat{K_m}=[K_m \ \varGamma_m]$ and $\widehat{J_m}=[J_{1,m} \ J_{2,m}]$. If $\widehat{x}=[x^{'} \ \varphi^{'}(C_ix) ]^{'} \in \mathcal{S}(\widehat{K_m}-\widehat{J_m},\rho)$, then for $u=K_mx+\varGamma_m\varphi(C_ix)$ we have that the nonlinearity $\delta(u)$ satisfies the following sector condition for any diagonal positive definite matrix $T_m\in\mathbb{R}^{m\times m}$:
+\textbf{Lemma 3}. Consider matrices $\widehat{K_m}=[K_m \ \varGamma_m]\in\mathbb{N}^{m\times(n+p)}$ and $\widehat{J_m}=[J_{1,m} \ J_{2,m}]\in\mathbb{N}^{m\times(n+p)}$. If $\widehat{x}=[x^{'} \ \varphi^{'}(C_ix) ]^{'} \in \mathcal{S}(\widehat{K_m}-\widehat{J_m},\rho)$, for $u=K_mx+\varGamma_m\varphi(C_ix)$ we have that the nonlinearity $\delta(u)$ satisfies the following sector condition for any diagonal positive definite matrix $T_m\in\mathbb{R}^{m\times m}$:
 \begin{equation}
 \begin{split}
 SC_u(i,m,u,x,T_m):= &\delta^{'}(u)T_m^{-1}[\delta(u)-\widehat{J_m}\widehat{x}]\leq 0.
