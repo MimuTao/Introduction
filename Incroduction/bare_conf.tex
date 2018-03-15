@@ -54,6 +54,7 @@
 \documentclass[conference]{IEEEtran}
 \usepackage{mathrsfs}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{bm}
 \usepackage[colorlinks,linkcolor=blue]{hyperref}
@@ -406,24 +407,8 @@
 
 
 \section{Introduction}
-% no \IEEEPARstart
-This demo file is intended to serve as a ``starter file''
-for IEEE conference papers produced under \LaTeX\ using
-IEEEtran.cls version 1.8b and later.
-% You must have at least 2 lines in the paragraph with the drop letter
-% (should never be an issue)
-I wish you the best of success.
-
-\hfill mds
-
-\hfill August 26, 2015
-
-\subsection{Subsection Heading Here}
-Subsection text here.
 
 
-\subsubsection{Subsubsection Heading Here}
-Subsubsection text here.
 
 
 % An example of a floating figure using the graphicx package.
@@ -524,7 +509,7 @@ Subsubsection text here.
 
 
 \section{Preliminaries}
-Consider a discrete-time MJLS with both actuator and sensor saturations on a probability space ($\Omega,\mathcal{F},\mathcal{P}$):
+Consider a class of discrete-time MJLS with control saturation on a probability space ($\varOmega,\mathcal{F},\mathcal{P}$):
 \begin{equation}\label{syseq}
 	\left\{
 	\begin{array}{lr}
@@ -533,74 +518,105 @@ Consider a discrete-time MJLS with both actuator and sensor saturations on a pro
 			&+E^x_{r(k)}w_k, \quad y_k=C_{r(k)}x_k,
 		\end{split}
 		\\
-		z_k=C^z_{r(k)}x_k+G^z_{r(k)}\varphi(y_k)+D^z_{r(k)}\mathrm{sat}(u_k)+E^z_{r(k)}w_k
+		\begin{split}
+			z_k=&C^z_{r(k)}x_k+G^z_{r(k)}\varphi(y_k)+D^z_{r(k)}\mathrm{sat}(u_k)\\
+				&+E^z_{r(k)}w_k
+		\end{split}
+		
 	\end{array}
 	\right.
+\end{equation}\\
+%where$A_{r(k)}, F_{r(k)}, B_{r(k)}, E^x_{r(k)}, C^z_{r(k)}, G^z_{r(k)}, D^z_{r(k)}$ and $E^z_{r(k)}$ represent the time-varying system matrices, all of which are pre-known and real, $x_k \in \mathbb{R}^{n_x}, u_k \in \mathbb{R}^{n_u}, y_k\in \mathbb{R}^{n_y}, z_k\in \mathbb{R}^{n_z}$, and $w_k\in\mathbb{R}^{n_w}$ are respectively the state, the control input, the output related to the nonlinearity, the controlled output and the exogenous disturbance vector of system \eqref{syseq} at the instant k.  
+where$A_{r(k)}, F_{r(k)}, B_{r(k)}, E^x_{r(k)}, C^z_{r(k)}, G^z_{r(k)}, D^z_{r(k)}$ and $E^z_{r(k)}$ represent the time-varying system matrices, all of which are pre-known and real, $x_k \in \mathbb{R}^{n}, u_k \in \mathbb{R}^{m}, y_k\in \mathbb{R}^{p}, z_k\in \mathbb{R}^{q}$, and $w_k\in\mathbb{R}^{r}$ are respectively the state, the control input, the output related to the nonlinearity, the controlled output and the exogenous disturbance vector of system \eqref{syseq} at the instant $k$.  
+%Where $x_k\in\mathbb{R}^{n_x}$ is the state vector, $u_k\in\mathbb{R}^{n_u}$ is the control input, $y_k\in\mathbb{R}^{n_y}$ is the system output, $z_k\in\mathbb{R}^{n_z}$ is the control output, nad $w_k\in\mathbb{R}^{n_w}$ is the exogenous disturbance in $l_2[0,\infty)$, at the instant $k$. The saturation function $\rm{sat}(\cdot)$ is defined as follows: for any $u\in\mathbb{R}^{n_u}, \mathrm{sat}(u)_{(\ell)}=\mathrm{sign}u_{(\ell)} \min(\rho_{(\ell)},|u_{(\ell)}|),\forall\ell=1,\dots,n_u\}$, where $\ell$ represent the $\ell$th element of the vector and  the vector $0<\rho<\mathbb{R}^n_u$ is assumed to be given. $\{r(k),k\geq0\}$ is a Markov chain taking values in a finite set $\mathcal{N}=\{1,2,\dots,N\}$ with mode TPs:
+%The saturation function $\rm{sat}(\cdot)$ is defined as follows: for any $u\in\mathbb{R}^{n_u}, \mathrm{sat}(u)_{(\ell)}=\mathrm{sign}u_{(\ell)} \min(\rho_{(\ell)},|u_{(\ell)}|),\forall\ell=1,\dots,n_u\}$, where $\ell$ represent the $\ell$th element of the vector and  the vector $0<\rho<\mathbb{R}^n_u$ is assumed to be given. $\{r(k),k\geq0\}$ is a Markov chain taking values in a finite set $\mathcal{N}=\{1,2,\dots,N\}$ with mode TPs:
+The saturation function $\rm{sat}(\cdot)$ is defined as follows:
+\begin{equation}
+\mathrm{sat}(u)_{(\ell)}=\mathrm{sign}(u_{(\ell)}) \min(\rho_{(\ell)},|u_{(\ell)}|),
 \end{equation}
-
-where $ x_k\in\mathbb{R}^{n_x}, u_k\in\mathbb{R}^{n_u}, y_k\in\mathbb{R}^{n_y}, z_k\in\mathbb{R}^{n_z},$ and $ w_k\in\mathbb{R}^{n_w}$ are respectively the state, the control input, the output related to the nonlinearity, the controlled output and the exogenous disturbance vector of the system (1) at the instant $k$. The saturation function $\rm{sat}(\cdot)$ is defined as follows: for any $u\in\mathbb{R}^n_u$, $\mathrm{sat}(u)_{(\ell)}=\mathrm{sign}(u)_{(\ell)} \min(\rho_{(\ell)},|(u)_{(\ell)}|),\forall\ell=1,\dots,n_u\}$, where the vector $0<\rho<\mathbb{R}^n_u$ is assumed to be given. $\{r(k),k\geq0\}$ is a Markov chain taking values in a finite set $\mathcal{N}=\{1,2,\dots,N\}$ with mode TPs:
+where $\ell \in \{1,\cdots,m\}$ represent the $\ell$th element of the vector and  the vector $0<\rho\in\mathbb{R}^{m}$ is assumed to be given. $\{r(k),k\geq0\}$ is a Markov chain taking values in a positive integer set $\mathcal{N}=\{1,2,\dots,N\}$ with mode TPs:
 \begin{equation}
 	\Pr\{r(k+1)=j|r(k)=i\}=\pi_{ij}
 \end{equation}
-where $\pi_{ij}\geq0,\forall i,j\in\mathcal{N}$, and related transition probability matrix is given by $\mathit{\Pi}=\{\pi_{ij}\}$, the system matrices in (1) can be expressed as $A_i,F_i,B_i,E^x_i,C^z_i,G^z_i,D^z_i$ and $E^z_i$, which are real known constant matrices with appropriate dimensions.
+where for all $i,j\in\mathcal{N}$, $\pi_{ij}\in[0,1]$, and $\sum_{j=0}^{N}\pi_{ij}=1$ for each mode $i$. The system matrices in \eqref{syseq} at instant $k$ can be expressed as $A_i,F_i,B_i,E^x_i,C^z_i,G^z_i,D^z_i$ and $E^z_i$, which are real known constant matrices with appropriate dimensions, and the related transition probability matrix is marked as $\mathit{\Pi}=\{\pi_{ij}\}$.\\
 \\
-\textbf{Assumption 1:\label{assumption1} } For each mode $i\in\mathcal{N}, \varphi_i(\cdot):\mathbb{R}^{n_y}\rightarrow\mathbb{R}^{n_y} $ satisfies the following conditions:\\
-(1) $\varphi_i(0)=0$ and \\
-(2) exist $N$ diagonal positive definite matrices $\varOmega_i\in\mathbb{R}^{n_y\times n_y}$ such that $\forall y\in\mathbb{R}^{n_y}$ and $\forall \ell =1,\dots,n_y$,
+\textbf{Assumption 1:} $\varphi(\cdot): \mathbb{R}^{p}\rightarrow\mathbb{R}^{p}$ satisfy:\\ 
+(1) $\varphi(0)=0$ and,  \\
+(2) there exist a diagonal positive definite matrix $\varOmega \in\mathbb{R}^{p\times p}$ such that $\forall y\in\mathbb{R}^{p}$ and $\forall \ell \in\{1,\dots,p\}$,
 \begin{equation}\label{cbs}
-\varphi_{i,(\ell)}(y)[\varphi_i(y)-\varOmega_iy ]_{(\ell)}\leq 0.
+\varphi_{(\ell)}(y)[\varphi(y)-\varOmega y ]_{(\ell)}\leq 0.
 \end{equation}
-We say in this case that the N nonlinearities $\phi_i(\cdot) $ satisfy their own cone bounded sector conditions and to be decentralized. From \eqref{cbs} we have $\forall i\in\ell_N,\forall y\in\mathbb{R}^p$:
+And we say in this case that the nonlinearity $\varphi(\cdot) $ satisfy it's own cone bounded sector conditions and to be decentralized. From \eqref{cbs} we have $\forall y\in\mathbb{R}^p$:
 \begin{equation}\label{scieq}
-SC(i,x,\Lambda_i)=\varphi_i^{\mathrm{T}}(C_ix)\varLambda_i[\varphi_i(C_ix)-\varOmega_iC_ix]\leq0,
+	SC(y,\varLambda):= \varphi^{\mathrm{'}}(y)\varLambda[\varphi(y)-\varOmega y]\leq0,
 \end{equation}
-where $\varLambda_i$ are any diagonal postive semidefinite matrices. Not thar matrices $\varOmega_i \in \mathbb{R}^{n_y\times n_y}$ are defined by the designer and, thus, they are considered to be given. From the Assumption 1, we have that ineqality \label{scieq} yields to $[\varOmega_iy]_{(\ell)}[\varphi_i(y)-\varOmega_iy]_{(\ell)}\leq0, \forall\ell=1,\dots,n_y, \forall y\in\mathbb{R}^{n_y}, \forall i \in \mathcal{M} $, which implies: $\forall y \in \mathbb{R}^{n_y}, 0\leq\varphi^{\mathrm{T}}_i(y)\Lambda_i\varphi_i(y) \leq \varphi^{\mathrm{T}}_i(y)\varLambda_i\varphi_i(y) \leq y^{\mathrm{T}}\varOmega_i\varLambda_i\varOmega_iy$.
-\\
-\textbf{Definition 1:} Consider $w_k=0, k\in \mathbb{N}$, in \eqref{syseq}. System \eqref{syseq} is said to be locally stochastically stable if $\|x\|^2_2=\sum_{k=0}^{\infty}\mathbb{E}[\|x_k\|^2]<\infty$, for any initial condition $x_0\in \mathcal{D}_0$ and any initial mode $r(0)$. In this case the set $\mathcal{D}_0 \subset \mathbb{R}^{n_y}$ iscalled the domain of stochastic stability of the origin.     
-\\
-Set $\mathcal{F}_k$ as the $\sigma$-field generated by the random varibales $x_k$ and $r(k)$. We define next the class of exogenous disturbances with bounded energy and the finite $\ell_2$-induced norm.
-\\
-\textbf{Definition 2}: For $\gamma>0$, set $\mathcal{W}_{\gamma}$ as follows:
+%where $\varLambda$ is any diagonal postive semidefinite matrix, and $\varOmega$ is consider to be given. From the Assumption 1, we have that inequality \label{scieq} yields to $[\varOmega y]_{(\ell)}[\varphi(y)-\varOmega y]_{(\ell)}\leq0, \forall\ell=1,\dots,n_y, \forall y\in\mathbb{R}^{n_y}$, which implies: $\forall y \in \mathbb{R}^{n_y}, 0\leq\varphi^{\mathrm{T}}(y)\varLambda\varphi(y) \leq \varphi^{\mathrm{T}}(y)\varLambda\varphi(y) \leq y^{\mathrm{T}}\varOmega\varLambda\varOmega y$.
+where $\varLambda$ is any diagonal positive semidefinite matrix, and $\varOmega$ is consider to be given. From the Assumption 1, we get that:
 \begin{equation}
-\begin{split}
-\mathcal{W}_{\gamma}&:=\{w=\{w_k\}_{k\in\mathbb{N}};w_k\in\mathbb{R}^{n_w}, w_k \ \text{is}\  \mathcal{F}_k\text{-measureable},\\
- 			&k\in\mathbb{N}, \ \text{and}\  \|w\|^2_2=\sum_{k=0}^{\infty}\mathbb{E}(\|w_k\|)^2<\frac{1}{\gamma}\}.\\
-\end{split}
+[\varOmega y]_{(\ell)}[\varphi(y)-\varOmega y]_{(\ell)}\leq0,
 \end{equation}
+which implies:
+\begin{equation}
+ 0\leq\varphi^{\mathrm{'}}(y)\varLambda\varphi(y) \leq \varphi^{\mathrm{'}}(y)\varLambda\varphi(y) \leq y^{\mathrm{'}}\varOmega\varLambda\varOmega y
+\end{equation}\\
+\textbf{Definition 1:} System \eqref{syseq} is said to be locally stochastically stable if for $w_(k)=0$ and any initial condition $x_0\in \mathcal{D}_0$, $r(0)\in \mathcal{N}$, the following holds:
+\begin{equation}
+	\|x\|^2_2=\sum_{k=0}^{\infty}\mathbb{E}[\|x_k\|^2]<\infty.
+\end{equation} 
+In this case the set $\mathcal{D}_0 \subset \mathbb{R}^{p}$ is said to be the domain of stochastic stability of the origin. \\
+\\
+Set $\mathcal{F}_k$ as the $\sigma$-field generated by the random variables $x_k$ and $r(k)$. We define next the class of exogenous disturbances with bounded energy and the finite $\ell_2$-induced norm.
+\\
+\textbf{Definition 2}: For $\gamma>0$, set $\mathcal{W}_{\gamma}$ is defined as follows:
+\begin{equation}
+	\begin{split}
+		\mathcal{W}_{\gamma}&:=\{w=\{w_k\}_{k\in\mathbb{N}};w_k\in\mathbb{R}^{m}, k\in\mathbb{N}, w_k \ \text{is} \\
+		&\mathcal{F}_k\text{-measureable}, \text{and}\  \|w\|^2_2=\sum_{k=0}^{\infty}\mathbb{E}(\|w_k\|)^2<\frac{1}{\gamma}\}.\\
+	\end{split}
+\end{equation}
+The finite $\ell_2$-induced gain associated with the closed loop system \eqref{syseq} with $x_0=0$ between the disturbance $w=\{w_k\}_{k\in\mathbb{N}}$ and controlled output $z=\{z_k\}_{k\in\mathbb{N}}$ is equal or less than $\sqrt{\varrho}$ if for every $w\in\mathcal{W}_{\gamma}$ we have that
+\begin{equation}
+\frac{1}{\varrho}\|z\|^2_2=\frac{1}{\varrho}\sum_{k=0}^{\infty}\mathbb{E}\left[\|z_k\|^2\right] \leq \|w\|^2_2=\sum_{k=0}^{\infty}\mathbb{E}\left[\|w_k\|^2\right].
+\end{equation}\\
 \\
 In this paper, we consider the following controller:
 \begin{equation}\label{asycontroller}
 u_k=K_{\sigma(k)}x_k+\varGamma_{\sigma(k)}\varphi(y_k) 
 \end{equation}
-where $K_{\sigma(k)}\in \mathbb{N}^{n_u\times n_x}$ is a time-varing matrix standing for the controller gian matrix, and the $\varGamma_{\sigma(k)}\in \mathbb{N}^{n_u\times n_y}$ is a time-varing matrix standing for nonlinear output feedback gains, and the parameter $\{\sigma(k),k\geq0\}$ takes values in another pre-given positive integer set, which is marked as $\mathcal{M}=\{1,2,\dots,M\}$ subject to the pre-known conditional probability matrix $\Omega=\{\mu_{im}\}$, the probabilities of which are defined by
+where $K_{\sigma(k)}\in \mathbb{N}^{m\times n}$ is a time-varying matrix standing for the controller gian matrix, and the $\varGamma_{\sigma(k)}\in \mathbb{N}^{n_u\times n_y}$ is a time-varying matrix standing for nonlinear output feedback gains, and the parameter $\{\sigma(k),k\geq0\}$ takes values in another pre-given positive integer set, which is marked as $\mathcal{M}=\{1,2,\dots,M\}$ subject to the pre-known conditional probability matrix $\varPhi=\{\mu_{im} \}$, the probabilities of which are defined by
 \begin{equation}
 \Pr\{\sigma(k)=m|r(k)=i\}=\mu_{im}.
 \end{equation}
-Where the conditional probability $\mu_{im}\geq0, \forall i\in\mathcal{N},m\in\mathcal{M}$, and $\sum_{m=1}^{M}\mu_{im}=1$ for all $i\in\mathcal{N}$.
+Where for all $i\in\mathcal{N}, m\in\mathcal{M}, \mu_{im}\in [0,1]$, and $\sum_{m=1}^{M}\mu_{im}=1$ for each $i\in\mathcal{N}$.\\
 \\
-\textbf{Remark 1}: In practice, the information of the system modes can not be fully accessed to controller or not fully accurate, that is, the actual modes of system are hiden to the controller, which leads to the controller don't syschronize with system modes. Thus, we introduce $\sigma(k)$ to present the relationship between system modes and controller modes, and the set $(r(k),\sigma(k),\Pi,\Omega)$ constructs a hidden Markov model. 
+\textbf{Remark 1}: In practice, the information of the system modes can not be fully accessed to controller or not fully accurate, that is, the actual modes of system are hidden to the controller, which leads to the controller don't synchronize with system modes. Thus, we introduce $\sigma(k)$ to present the relationship between system modes and controller modes, and the set $(r(k),\sigma(k),\varPi,\varPhi)$ constructs a hidden Markov model. \\
 \\
-In this papaer, we define the dead-zone nonlinearity $dz(u)$ as follows:$dz(u)=u-\rm{sat}(u)$, for any $u\in\mathbb{R}^{n_u}$. Combing the asynchronus controller \eqref{asycontroller} and system \eqref{syseq} we have the following closed system.
+In this paper, we define the dead-zone nonlinearity $\delta(u)$ as follows:$\delta(u)=u-\mathrm{sat}(u)$, for any $u\in\mathbb{R}^{m}$. Combing the asynchronous controller \eqref{asycontroller} and system \eqref{syseq} we have the following closed system.
 \begin{equation}\label{close_system_equation}
 \left\{
 \begin{array}{lr}
 \begin{split}
 x_{k+1}=&(A_i+B_iK_m)x_k+(F_i+B_i\varGamma_m)\varphi(y_k)\\
-		&-B_idz(u_k)+E_i^xw_k\\
+		&-B\delta(u_k)+E_i^xw_k\\
 \end{split}
 \\
 \begin{split}
 z_k=&(C^z_i+D_i^zK_m)x_k+(G^z_i+D^z_i\varGamma_m)\varphi(y_k)\\
-&-D_i^zdz(u_k)+E^z_iw_k
+&-D_i^z\delta(u_k)+E^z_iw_k
 \end{split}
 \end{array}
 \right.
+\end{equation} 
+\\
+We consider a generalized local sector condition $\delta(u)=u-\mathrm{sat}(u)$, and use $\rho$ to denotes the bounds of the saturation function $\mathrm{sat}(u)$, for given matrices $H_m\in\mathbb{R}^{n+p}$, we define the set $\mathcal{S}(H_m,\rho):=\{\xi\in\mathbb{R}^{n_x+n_y};-\rho\leq H_m\xi\leq\rho, \forall m\in \mathcal{M} \}$.
+\\
+\textbf{Lemma 3}. Consider $m\times(n+p)$-matrices $\widehat{K_m}=[K_m \ \varGamma_m]$ and $\widehat{J_m}=[J_{1,m} \ J_{2,m}]$. If $\widehat{x}=[x^{'} \ \varphi^{'}(C_ix) ]^{'} \in \mathcal{S}(\widehat{K_m}-\widehat{J_m},\rho)$, then for $u=K_mx+\varGamma_m\varphi(C_ix)$ we have that the nonlinearity $\delta(u)$ satisfies the following sector condition for any diagonal positive definite matrix $T_m\in\mathbb{R}^{m\times m}$:
+\begin{equation}
+\begin{split}
+SC_u(i,m,u,x,T_m):= &\delta^{'}(u)T_m^{-1}[\delta(u)-\widehat{J_m}\widehat{x}]\leq 0.
+\end{split}
 \end{equation}
-In order to characterize the dead-zone $dz(u_k)$ as belonging to a generalized local sector condition, we define, for given giben matrices $H_i\in\mathbb{R}^{n_x+n_y}, i\in\mathcal{N}$, the set 
-
-
-
-
+\\
 
 
 

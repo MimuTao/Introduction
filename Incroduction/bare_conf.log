@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.12.2)  12 MAR 2018 14:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.12.2)  15 MAR 2018 19:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -175,13 +175,16 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
+(c:/MimuTao/Tex/TexLive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
 (c:/MimuTao/Tex/TexLive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup5
 \symAMSb=\mathgroup6
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
+))
 (c:/MimuTao/Tex/TexLive/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup7
@@ -312,20 +315,20 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (./bare_conf.aux)
 \openout1 = `bare_conf.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 320.
-LaTeX Font Info:    ... okay on input line 320.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 320.
-LaTeX Font Info:    ... okay on input line 320.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 320.
-LaTeX Font Info:    ... okay on input line 320.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 320.
-LaTeX Font Info:    ... okay on input line 320.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 320.
-LaTeX Font Info:    ... okay on input line 320.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 320.
-LaTeX Font Info:    ... okay on input line 320.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 320.
-LaTeX Font Info:    ... okay on input line 320.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
 
 -- Lines per column: 56 (exact).
 \AtBeginShipoutBox=\box30
@@ -355,7 +358,7 @@ File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
 \makeMPintoPDFobject=\count122
 \everyMPtoPDFconversion=\toks22
 )))
-Package hyperref Info: Link coloring ON on input line 320.
+Package hyperref Info: Link coloring ON on input line 321.
  (c:/MimuTao/Tex/TexLive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -364,9 +367,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count123
 )
-LaTeX Info: Redefining \ref on input line 320.
-LaTeX Info: Redefining \pageref on input line 320.
-LaTeX Info: Redefining \nameref on input line 320.
+LaTeX Info: Redefining \ref on input line 321.
+LaTeX Info: Redefining \pageref on input line 321.
+LaTeX Info: Redefining \nameref on input line 321.
 
 (./bare_conf.out) (./bare_conf.out)
 \@outlinefile=\write3
@@ -382,23 +385,82 @@ LaTeX Warning: No \author given.
 
 LaTeX Warning: No \author given.
 
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 411.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 512.
 (c:/MimuTao/Tex/TexLive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 411.
+LaTeX Font Info:    Try loading font information for U+msa on input line 512.
 
 (c:/MimuTao/Tex/TexLive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 411.
+LaTeX Font Info:    Try loading font information for U+msb on input line 512.
 
 (c:/MimuTao/Tex/TexLive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 534.
+(amsmath)                trying to recover with `aligned' on input line 519.
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 524.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 540--546
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 565--571
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--583
+
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 589--595
+\OT1/ptm/m/n/10 Where for all $\OML/cmm/m/it/10 i \OMS/cmsy/m/n/10 2 N\OML/cmm/
+m/it/10 ; m \OMS/cmsy/m/n/10 2 M\OML/cmm/m/it/10 ; ^^V[] \OMS/cmsy/m/n/10 2 \OT
+1/cmr/m/n/10 [0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1]$\OT1/ptm/m/n/10 , and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 589--595
+
+ []
+
+
+Underfull \hbox (badness 1577) in paragraph at lines 589--595
+\OT1/ptm/b/n/10 Remark 1\OT1/ptm/m/n/10 : In prac-tice, the in-for-ma-tion of t
+he sys-tem
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 589--595
+
+ []
+
+[1{c:/MimuTao/Tex/TexLive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 601.
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 606.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 618--620
+
+ []
 
 
 ** Conference Paper **
@@ -411,28 +473,26 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 626.
-[1{c:/MimuTao/Tex/TexLive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 670.
+[2
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 626.
-
-(./bare_conf.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 626.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 626.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 670.
+ (./bare_conf.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 670.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 670.
 Package rerunfilecheck Info: File `bare_conf.out' has not changed.
-(rerunfilecheck)             Checksum: B5E04287680D866C39097F342DC83730;298.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 626.
+(rerunfilecheck)             Checksum: 5C3929C7FF9DA7C7673A48A7A470413D;141.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 670.
  ) 
 Here is how much of TeX's memory you used:
- 6481 strings out of 492995
- 98635 string characters out of 6133147
- 197442 words of memory out of 5000000
- 9951 multiletter control sequences out of 15000+600000
- 47163 words of font info for 106 fonts, out of 8000000 for 9000
+ 6704 strings out of 492995
+ 100818 string characters out of 6133147
+ 200611 words of memory out of 5000000
+ 10163 multiletter control sequences out of 15000+600000
+ 46694 words of font info for 109 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 28i,13n,28p,714b,315s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,17n,28p,749b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/MimuTao/Tex/TexLive/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/MimuTao/Te
 x/TexLive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/MimuTao/Tex/
 TexLive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/MimuTao/Tex/Te
@@ -441,16 +501,19 @@ ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/MimuTao/Tex/TexLive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/MimuTao/Tex/TexLive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/MimuTao/Tex/TexLive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/MimuTao/Tex/TexLive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/f
-onts/type1/public/amsfonts/symbols/msbm10.pfb><c:/MimuTao/Tex/TexLive/texmf-dis
-t/fonts/type1/urw/times/utmb8a.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/fonts/typ
-e1/urw/times/utmbi8a.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/fonts/type1/urw/tim
-es/utmr8a.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/fonts/type1/urw/times/utmri8a.
-pfb>
-Output written on bare_conf.pdf (1 page, 132219 bytes).
+t/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy7.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti10.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/fon
+ts/type1/public/amsfonts/symbols/msbm7.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/f
+onts/type1/urw/times/utmb8a.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/fonts/type1/
+urw/times/utmbi8a.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/fonts/type1/urw/times/
+utmr8a.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
+>
+Output written on bare_conf.pdf (2 pages, 157517 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 123 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 500000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
