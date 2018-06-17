@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.12.2)  17 APR 2018 09:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.12.2)  16 JUN 2018 21:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -408,50 +408,43 @@ Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 524.
 
 
-Underfull \hbox (badness 2318) in paragraph at lines 528--534
-\OT1/ptm/m/n/10 where $\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 R[
-]\OML/cmm/m/it/10 ; u[] \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 R[]\OML/cmm/m/it/10 ; 
-y[] \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 R[]\OML/cmm/m/it/10 ; z[] \OMS/cmsy/m/n/10
- 2 \U/msb/m/n/10 R[]$\OT1/ptm/m/n/10 ,
- []
-
-
-Underfull \hbox (badness 2027) in paragraph at lines 528--534
+Underfull \hbox (badness 2846) in paragraph at lines 528--539
 \OT1/ptm/m/n/10 and $\OML/cmm/m/it/10 w[] \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 R[]$
- \OT1/ptm/m/n/10 rep-re-sent the state, the con-trol in-put,
+ \OT1/ptm/m/n/10 rep-re-sent the state, the con-trol in-
  []
 
 
-Underfull \hbox (badness 3078) in paragraph at lines 528--534
-\OT1/ptm/m/n/10 put and the ex-oge-nous dis-tur-bance vec-tor re-spec-tively.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 540--546
+Underfull \hbox (badness 10000) in paragraph at lines 541--547
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 565--571
+Underfull \hbox (badness 10000) in paragraph at lines 566--572
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--583
+Underfull \hbox (badness 10000) in paragraph at lines 581--584
 
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 589--595
-\OT1/ptm/m/n/10 Where for all $\OML/cmm/m/it/10 i \OMS/cmsy/m/n/10 2 N\OML/cmm/
-m/it/10 ; m \OMS/cmsy/m/n/10 2 M\OML/cmm/m/it/10 ; ^^V[] \OMS/cmsy/m/n/10 2 \OT
-1/cmr/m/n/10 [0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1]$\OT1/ptm/m/n/10 , and
+Underfull \hbox (badness 10000) in paragraph at lines 590--613
+
+ []
+
+
+Underfull \hbox (badness 3271) in paragraph at lines 590--613
+\OT1/ptm/m/n/10 Combing the asyn-chronous con-troller [] and sys-tem
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 589--595
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 618.
 
- []
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 622.
 
 [1{c:/MimuTao/Tex/TexLive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -459,14 +452,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 589--595
 ]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 601.
+(amsmath)                trying to recover with `aligned' on input line 670.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 606.
+(amsmath)                trying to recover with `aligned' on input line 674.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 618--620
+Overfull \hbox (46.9875pt too wide) detected at line 760
+[] [] \OML/cmm/m/it/10 < \OT1/cmr/m/n/10 0
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 760--762
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 813--816
+\OT1/ptm/m/n/10 Where $\OML/cmm/m/it/10 P[] \OT1/cmr/m/n/10 = []$\OT1/ptm/m/n/1
+0 . De-not-ing $\OML/cmm/m/it/10 h[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (3.30179pt too wide) detected at line 849
+[] [] \OML/cmm/m/it/10 < \OT1/cmr/m/n/10 0
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 859--865
 
  []
 
@@ -481,26 +495,54 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 670.
-[2
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 951.
+[2pdfTeX warning (ext4): destination with the same identifier (name{equation.3.
+13}) has been already used, duplicate ignored
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 670.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.951 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{equation.3.15}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.951 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{equation.3.15}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.951 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{equation.3.15}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.951 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{equation.3.16}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.951 \end{document}
+                    ]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 951.
  (./bare_conf.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 670.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 670.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 951.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 951.
 Package rerunfilecheck Info: File `bare_conf.out' has not changed.
-(rerunfilecheck)             Checksum: 5C3929C7FF9DA7C7673A48A7A470413D;141.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 670.
+(rerunfilecheck)             Checksum: E6C9503B80C840ADDF797BB16B63E98C;187.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 951.
  ) 
 Here is how much of TeX's memory you used:
- 6704 strings out of 492995
- 100818 string characters out of 6133147
- 199611 words of memory out of 5000000
- 10163 multiletter control sequences out of 15000+600000
+ 6714 strings out of 492995
+ 100947 string characters out of 6133147
+ 215767 words of memory out of 5000000
+ 10168 multiletter control sequences out of 15000+600000
  46694 words of font info for 109 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 28i,17n,28p,749b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,20n,28p,749b,323s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/MimuTao/Tex/TexLive/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/MimuTao/Te
 x/TexLive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/MimuTao/Tex/
 TexLive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/MimuTao/Tex/Te
@@ -514,14 +556,14 @@ onts/type1/public/amsfonts/cm/cmsy7.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/fon
 ts/type1/public/amsfonts/symbols/msbm7.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/f
-onts/type1/urw/times/utmb8a.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/fonts/type1/
-urw/times/utmbi8a.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/fonts/type1/urw/times/
-utmr8a.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
->
-Output written on bare_conf.pdf (2 pages, 155666 bytes).
+onts/type1/public/rsfs/rsfs10.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/fonts/type
+1/urw/times/utmb8a.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/fonts/type1/urw/times
+/utmbi8a.pfb><c:/MimuTao/Tex/TexLive/texmf-dist/fonts/type1/urw/times/utmr8a.pf
+b><c:/MimuTao/Tex/TexLive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bare_conf.pdf (2 pages, 165352 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
- 22 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 142 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
